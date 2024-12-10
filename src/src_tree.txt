@@ -1,0 +1,23 @@
+.
+├── App.tsx
+├── api
+│   └── userApi.js
+├── components
+│   ├── CourseCreation.tsx
+│   ├── LearningStyleAssessment.tsx
+│   ├── Signin.tsx
+│   ├── Signup.tsx
+│   ├── UserProfile.tsx
+│   ├── db.js
+│   ├── server.js
+│   └── userModel.js
+├── index.css
+├── main.tsx
+├── src_tree.txt
+├── store
+│   └── useStore.ts
+├── types
+│   └── index.ts
+└── vite-env.d.ts
+
+5 directories, 16 files

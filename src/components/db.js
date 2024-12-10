@@ -1,5 +1,5 @@
 // db.js
-const { MongoClient, ServerApiVersion } = require('mongodb');
+import { MongoClient, ServerApiVersion } from 'mongodb';
 
 const uri = "mongodb+srv://wicked:u46daRH2NhFd9lHI@geaux-contentai.9pqv0ok.mongodb.net/?retryWrites=true&w=majority&appName=geaux-contentai";
 
@@ -14,14 +14,12 @@ const client = new MongoClient(uri, {
 
 let db;
 
-const connectDB = async () => {
+export const connectDB = async () => {
   if (db) return db;
   await client.connect();
   db = client.db('geauxacademy'); // Replace with your database name
   return db;
 };
-
-module.exports = connectDB;
 
 async function run() {
   try {

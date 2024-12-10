@@ -1,10 +1,9 @@
-// server.js
+
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import bcrypt from 'bcryptjs';
-import { createUser, findUserByEmail } from './userModel';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -39,6 +38,19 @@ app.post('/api/users', async (req, res) => {
 app.get('/api/users', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.query.email });
+    res.send(user);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+app.put('/api/users/streak', async (req, res) => {
+  try {
+    const user = await User.findOneAndUpdate(
+      { email: req.body.email },
+      { streak: req.body.streak },
+      { new: true }
+    );
     res.send(user);
   } catch (error) {
     res.status(500).send(error);

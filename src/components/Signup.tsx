@@ -2,9 +2,11 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
-import { createUser } from '../api/userApi'; // Import the API function
+import { createUser } from '../api/userApi';
+import { useStore } from '../store/useStore';
 
 const Signup = () => {
+  const { setUser } = useStore();
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -23,22 +25,27 @@ const Signup = () => {
         .required('Required'),
     }),
     onSubmit: async (values) => {
-      const newUser = {
-        name: values.name,
-        email: values.email,
-        password: values.password, // In a real application, hash the password before storing it
-        learningStyles: {
-          visual: 0,
-          auditory: 0,
-          reading: 0,
-          kinesthetic: 0,
-        },
-        streak: 0,
-        avatar: '',
-      };
-      const createdUser = await createUser(newUser);
-      if (createdUser) {
-        navigate('/profile');
+      try {
+        const newUser = {
+          name: values.name,
+          email: values.email,
+          password: values.password,
+          learningStyles: {
+            visual: 0,
+            auditory: 0,
+            reading: 0,
+            kinesthetic: 0,
+          },
+          streak: 0,
+          avatar: '',
+        };
+        const createdUser = await createUser(newUser);
+        if (createdUser) {
+          setUser(createdUser);
+          navigate('/profile');
+        }
+      } catch (error) {
+        console.error('Error creating user:', error);
       }
     },
   });

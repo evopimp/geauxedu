@@ -1,20 +1,30 @@
 // userModel.js
-const connectDB = require('./db');
+import { connectDB } from './db';
+import bcrypt from 'bcryptjs';
 
 const getUserCollection = async () => {
   const db = await connectDB();
   return db.collection('users');
 };
 
-const createUser = async (user) => {
+export const createUser = async (user) => {
   const users = await getUserCollection();
-  const result = await users.insertOne(user);
+  const hashedPassword = await bcrypt.hash(user.password, 10);
+  const result = await users.insertOne({ ...user, password: hashedPassword });
   return result.ops[0];
 };
 
-const findUserByEmail = async (email) => {
+export const findUserByEmail = async (email) => {
   const users = await getUserCollection();
   return await users.findOne({ email });
 };
 
-module.exports = { createUser, findUserByEmail };
+export const updateUserPassword = async (email, newPassword) => {
+  const users = await getUserCollection();
+  const hashedPassword = await bcrypt.hash(newPassword, 10);
+  const result = await users.updateOne(
+    { email },
+    { $set: { password: hashedPassword } }
+  );
+  return result.modifiedCount > 0;
+};
