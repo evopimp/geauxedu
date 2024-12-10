@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 import { LearningStyleAssessment } from './components/LearningStyleAssessment';
 import { UserProfile } from './components/UserProfile';
 import { CourseCreation } from './components/CourseCreation';
-import { BookOpen, User, PlusCircle } from 'lucide-react';
+import Signup from './components/Signup';
+import Signin from './components/Signin';
+import { BookOpen, User, PlusCircle, LogIn, UserPlus } from 'lucide-react';
 
 function App() {
   return (
@@ -31,6 +33,14 @@ function App() {
                   <PlusCircle className="h-5 w-5 mr-1" />
                   Create Course
                 </Link>
+                <Link to="/signup" className="flex items-center px-3 py-2">
+                  <UserPlus className="h-5 w-5 mr-1" />
+                  Sign Up
+                </Link>
+                <Link to="/signin" className="flex items-center px-3 py-2">
+                  <LogIn className="h-5 w-5 mr-1" />
+                  Sign In
+                </Link>
               </div>
             </div>
           </div>
@@ -41,6 +51,8 @@ function App() {
             <Route path="/assessment" element={<LearningStyleAssessment />} />
             <Route path="/profile" element={<UserProfile />} />
             <Route path="/create" element={<CourseCreation />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/signin" element={<Signin />} />
             <Route path="/" element={
               <motion.div
                 initial={{ opacity: 0 }}
