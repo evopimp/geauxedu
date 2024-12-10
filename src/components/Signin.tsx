@@ -1,11 +1,10 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useStore } from '../store/useStore';
 import { useNavigate, Link } from 'react-router-dom';
+import { findUserByEmail } from '../api/userApi'; // Import the API function
 
 const Signin = () => {
-  const { setUser } = useStore();
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -17,23 +16,13 @@ const Signin = () => {
       email: Yup.string().email('Invalid email address').required('Required'),
       password: Yup.string().min(6, 'Must be at least 6 characters').required('Required'),
     }),
-    onSubmit: (values) => {
-      // Mock authentication
-      const existingUser = {
-        id: '1',
-        name: 'John Doe',
-        email: values.email,
-        learningStyles: {
-          visual: 0,
-          auditory: 0,
-          reading: 0,
-          kinesthetic: 0,
-        },
-        streak: 0,
-        avatar: '',
-      };
-      setUser(existingUser);
-      navigate('/profile');
+    onSubmit: async (values) => {
+      const user = await findUserByEmail(values.email);
+      if (user && user.password === values.password) { // In a real application, compare hashed passwords
+        navigate('/profile');
+      } else {
+        alert('Invalid email or password');
+      }
     },
   });
 

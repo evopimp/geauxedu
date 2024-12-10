@@ -1,11 +1,10 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useStore } from '../store/useStore';
 import { useNavigate, Link } from 'react-router-dom';
+import { createUser } from '../api/userApi'; // Import the API function
 
 const Signup = () => {
-  const { setUser } = useStore();
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -23,11 +22,11 @@ const Signup = () => {
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('Required'),
     }),
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       const newUser = {
-        id: Date.now().toString(),
         name: values.name,
         email: values.email,
+        password: values.password, // In a real application, hash the password before storing it
         learningStyles: {
           visual: 0,
           auditory: 0,
@@ -37,8 +36,10 @@ const Signup = () => {
         streak: 0,
         avatar: '',
       };
-      setUser(newUser);
-      navigate('/profile');
+      const createdUser = await createUser(newUser);
+      if (createdUser) {
+        navigate('/profile');
+      }
     },
   });
 
