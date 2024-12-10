@@ -17,3 +17,8 @@ export const updateUserStreak = async (email, streak) => {
   const response = await axios.put(`${API_URL}/streak`, { email, streak });
   return response.data;
 };
+
+export const updateUser = async (userId, userDetails) => {
+  const response = await axios.put(`${API_URL}/${userId}`, userDetails);
+  return response.data;
+};

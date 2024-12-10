@@ -65,6 +65,9 @@ const Signin = () => {
         >
           Sign In
         </button>
+        <p className="mt-2 text-center">
+          <Link to="/forgot-password" className="text-blue-600">Forgot Password?</Link>
+        </p>
       </form>
       <p className="mt-4 text-center">
         Don't have an account? <Link to="/signup" className="text-blue-600">Sign Up</Link>

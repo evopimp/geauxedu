@@ -7,6 +7,7 @@ import { CourseCreation } from './components/CourseCreation';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
 import { BookOpen, User, PlusCircle, LogIn, UserPlus } from 'lucide-react';
+import { UserDashboard } from './components/UserDashboard'; // Import the new component
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
                   <LogIn className="h-5 w-5 mr-1" />
                   Sign In
                 </Link>
+                <Link to="/dashboard" className="flex items-center px-3 py-2">
+                  <User className="h-5 w-5 mr-1" />
+                  Dashboard
+                </Link>
               </div>
             </div>
           </div>
@@ -53,6 +58,7 @@ function App() {
             <Route path="/create" element={<CourseCreation />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
+            <Route path="/dashboard" element={<UserDashboard />} /> // Add the new route
             <Route path="/" element={
               <motion.div
                 initial={{ opacity: 0 }}

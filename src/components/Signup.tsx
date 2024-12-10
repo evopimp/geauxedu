@@ -15,6 +15,7 @@ const Signup = () => {
       email: '',
       password: '',
       confirmPassword: '',
+      avatar: '', // Add avatar field
     },
     validationSchema: Yup.object({
       name: Yup.string().required('Required'),
@@ -23,6 +24,7 @@ const Signup = () => {
       confirmPassword: Yup.string()
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('Required'),
+      avatar: Yup.string().url('Invalid URL').required('Required'), // Add validation for avatar
     }),
     onSubmit: async (values) => {
       try {
@@ -37,7 +39,7 @@ const Signup = () => {
             kinesthetic: 0,
           },
           streak: 0,
-          avatar: '',
+          avatar: values.avatar, // Include avatar in newUser object
         };
         const createdUser = await createUser(newUser);
         if (createdUser) {
@@ -96,6 +98,17 @@ const Signup = () => {
           />
           {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
             <div className="text-red-600 text-sm">{formik.errors.confirmPassword}</div>
+          ) : null}
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700">Avatar URL</label>
+          <input
+            type="text"
+            {...formik.getFieldProps('avatar')}
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+          {formik.touched.avatar && formik.errors.avatar ? (
+            <div className="text-red-600 text-sm">{formik.errors.avatar}</div>
           ) : null}
         </div>
         <button
