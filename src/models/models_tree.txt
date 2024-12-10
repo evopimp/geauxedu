@@ -1,0 +1,5 @@
+/home/wicked/geauxedu/src//models/
+├── models_tree.txt
+└── userModel.js
+
+1 directory, 2 files

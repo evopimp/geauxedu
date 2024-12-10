@@ -1,0 +1,5 @@
+/home/wicked/geauxedu/src//store/
+├── store_tree.txt
+└── useStore.ts
+
+1 directory, 2 files

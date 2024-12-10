@@ -2,11 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '../store/useStore';
 import { Radar } from 'recharts';
+import { updateUserStreak } from '../api/userApi';
 
 export const UserProfile = () => {
-  const { user } = useStore();
+  const { user, setUser } = useStore();
 
   if (!user) return null;
+
+  const resetStreak = async () => {
+    if (user) {
+      const updatedUser = await updateUserStreak(user.email, 0);
+      setUser(updatedUser);
+    }
+  };
 
   const learningStyleData = Object.entries(user.learningStyles).map(([key, value]) => ({
     subject: key,
@@ -36,6 +44,12 @@ export const UserProfile = () => {
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold mb-4">Learning Streak</h2>
           <div className="text-4xl font-bold text-blue-600">{user.streak} days</div>
+          <button
+            onClick={resetStreak}
+            className="mt-4 bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700"
+          >
+            Reset Streak
+          </button>
         </div>
       </div>
     </motion.div>

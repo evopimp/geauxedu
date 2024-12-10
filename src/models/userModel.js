@@ -1,5 +1,5 @@
 // userModel.js
-import { connectDB } from './db';
+import { connectDB } from '../utils/db.js'; // Ensure the correct path
 import bcrypt from 'bcryptjs';
 
 const getUserCollection = async () => {

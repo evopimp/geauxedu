@@ -12,3 +12,8 @@ export const findUserByEmail = async (email) => {
   const response = await axios.get(`${API_URL}?email=${email}`);
   return response.data;
 };
+
+export const updateUserStreak = async (email, streak) => {
+  const response = await axios.put(`${API_URL}/streak`, { email, streak });
+  return response.data;
+};

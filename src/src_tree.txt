@@ -1,6 +1,7 @@
-.
+/home/wicked/geauxedu/src/
 ├── App.tsx
 ├── api
+│   ├── api_tree.txt
 │   └── userApi.js
 ├── components
 │   ├── CourseCreation.tsx
@@ -8,16 +9,20 @@
 │   ├── Signin.tsx
 │   ├── Signup.tsx
 │   ├── UserProfile.tsx
-│   ├── db.js
-│   ├── server.js
-│   └── userModel.js
+│   └── components_tree.txt
 ├── index.css
 ├── main.tsx
+├── models
+│   └── userModel.js
+├── routes
+│   └── userRoutes.js
 ├── src_tree.txt
 ├── store
 │   └── useStore.ts
 ├── types
 │   └── index.ts
+├── utils
+│   └── db.js
 └── vite-env.d.ts
 
-5 directories, 16 files
+8 directories, 18 files

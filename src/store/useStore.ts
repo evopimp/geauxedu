@@ -7,6 +7,7 @@ interface Store {
   setUser: (user: User) => void;
   addCourse: (course: Course) => void;
   updateLearningStyle: (style: LearningStyle, value: number) => void;
+  resetStreak: () => void;
 }
 
 export const useStore = create<Store>((set) => ({
@@ -26,4 +27,7 @@ export const useStore = create<Store>((set) => ({
           }
         : null,
     })),
+  resetStreak: () => set((state) => ({
+    user: state.user ? { ...state.user, streak: 0 } : null,
+  })),
 }));

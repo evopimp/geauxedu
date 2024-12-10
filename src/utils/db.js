@@ -1,7 +1,10 @@
 // db.js
 import { MongoClient, ServerApiVersion } from 'mongodb';
+import dotenv from 'dotenv';
 
-const uri = "mongodb+srv://wicked:u46daRH2NhFd9lHI@geaux-contentai.9pqv0ok.mongodb.net/?retryWrites=true&w=majority&appName=geaux-contentai";
+dotenv.config();
+
+const uri = process.env.MONGODB_URI;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -17,7 +20,7 @@ let db;
 export const connectDB = async () => {
   if (db) return db;
   await client.connect();
-  db = client.db('geauxacademy'); // Replace with your database name
+  db = client.db(process.env.DB_NAME); // Replace with your database name
   return db;
 };
 
