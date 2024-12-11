@@ -1,15 +1,21 @@
 // src/server.ts
 import express from 'express';
-import chatRouter from './api/chat';
-import userRoutes from './routes/userRoutes';
+import cors from 'cors';
+import { env } from './config/env';
+import { chatRouter } from './routes/chatRoutes';
+import { userRouter } from './routes/userRoutes';
+import { errorHandler } from './middleware/errorHandler';
 
 const app = express();
+
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/chat', chatRouter);
-app.use('/api/users', userRoutes);
+app.use('/api/users', userRouter);
+app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = env.PORT;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

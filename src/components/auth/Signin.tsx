@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
-import { signIn } from '../api/userApi';
-import { useStore } from '../store/useStore';
+import { signIn } from '../../api/userApi';
+import { useStore } from '../../store/useStore';
 
 const Signin = () => {
   const { setUser } = useStore();

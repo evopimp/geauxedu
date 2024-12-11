@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ErrorBoundary from './components/ErrorBoundary';
+import ErrorBoundary from './components/common/ErrorBoundary';
 import { BookOpen, User, PlusCircle, LogIn, UserPlus } from 'lucide-react';
 
 const LearningStyleAssessment = React.lazy(() => import('./components/LearningStyleAssessment'));
 const UserProfile = React.lazy(() => import('./components/UserProfile'));
 const CourseCreation = React.lazy(() => import('./components/CourseCreation'));
 const Signup = React.lazy(() => import('./components/Signup'));
-const Signin = React.lazy(() => import('./components/Signin'));
+const Signin = React.lazy(() => import('./components/auth/Signin'));
 const UserDashboard = React.lazy(() => import('./components/UserDashboard'));
 
 function App() {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useStore } from '../store/useStore';
+import { type Course } from '@/types/course';
+import { useStore } from '@/store/useStore';
 // import { LearningStyle } from '../types';
 
 export const CourseCreation = () => {
