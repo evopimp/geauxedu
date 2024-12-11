@@ -13,13 +13,17 @@ export const getAllUsers = async (req, res) => {
 export const getUserByEmail = async (req, res) => {
   try {
     const { email } = req.query;
-    const user = await User.findOne({ email }).select('-password');
+    const user = await User.findOne({ email });
     
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
+
+    // Don't send password to frontend
+    const userResponse = user.toObject();
+    delete userResponse.password;
     
-    res.json(user);
+    res.json(userResponse);
   } catch (error) {
     console.error('Get user error:', error);
     res.status(500).json({ message: error.message });
@@ -28,7 +32,7 @@ export const getUserByEmail = async (req, res) => {
 
 export const createUser = async (req, res) => {
   try {
-    const { email } = req.body;
+    const { email, password } = req.body;
     
     // Check if user exists
     const existingUser = await User.findOne({ email });
@@ -36,7 +40,15 @@ export const createUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    const user = new User(req.body);
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+    
+    // Create user with hashed password
+    const user = new User({
+      ...req.body,
+      password: hashedPassword
+    });
+    
     await user.save();
     
     // Don't send password back

@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
 import { findUserByEmail } from '../api/userApi';
 import { useStore } from '../store/useStore';
-import bcrypt from 'bcryptjs'; // Import bcrypt
 
 const Signin = () => {
   const { setUser } = useStore();
   const navigate = useNavigate();
+  const [error, setError] = useState<string | null>(null);
 
   const formik = useFormik({
     initialValues: {
@@ -17,29 +17,27 @@ const Signin = () => {
     },
     validationSchema: Yup.object({
       email: Yup.string().email('Invalid email address').required('Required'),
-      password: Yup.string()
-        .min(6, 'Must be at least 6 characters')
-        .required('Required'),
+      password: Yup.string().required('Required'),
     }),
     onSubmit: async (values) => {
       try {
         const user = await findUserByEmail(values.email);
-        if (user) {
-          const passwordMatch = await bcrypt.compare(
-            values.password,
-            user.password
-          );
-          if (passwordMatch) {
-            setUser(user);
-            navigate('/profile');
-          } else {
-            alert('Invalid email or password');
-          }
-        } else {
-          alert('User not found');
+        if (!user) {
+          setError('No account found with this email address');
+          return;
         }
+        
+        // TODO: Add actual password verification here
+        // This is a placeholder - you should implement proper password verification
+        if (values.password !== user.password) {
+          setError('Invalid email or password');
+          return;
+        }
+        
+        setUser(user);
+        navigate('/profile');
       } catch (error) {
-        console.error('Error signing in:', error);
+        setError(error instanceof Error ? error.message : 'An unexpected error occurred');
       }
     },
   });

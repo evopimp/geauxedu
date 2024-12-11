@@ -14,28 +14,26 @@ export const createUser = async (userData: Partial<User>): Promise<User> => {
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<APIError>;
-    console.error('Error creating user:', axiosError.response?.data || axiosError.message);
-    throw {
-      message: axiosError.response?.data?.message || 'Failed to create user',
-      status: axiosError.response?.status
-    };
+    const errorMessage = axiosError.response?.data?.message 
+      || axiosError.response?.statusText 
+      || 'Failed to create user';
+    throw new Error(errorMessage);
   }
 };
 
 export const findUserByEmail = async (email: string): Promise<User | null> => {
   try {
+    // Fix: Update to match the route in userRoutes.js
     const response = await axios.get<User>(`${API_URL}/email`, {
-      params: { email },
-      timeout: 15000
+      params: { email }
     });
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<APIError>;
-    console.error('Error finding user:', axiosError.response?.data || axiosError.message);
-    throw {
-      message: axiosError.response?.data?.message || 'Failed to find user',
-      status: axiosError.response?.status
-    };
+    if (axiosError.response?.status === 404) {
+      return null;
+    }
+    throw new Error('Failed to fetch user');
   }
 };
 
@@ -62,6 +60,33 @@ export const updateUser = async (userId: string, userDetails: Partial<User>): Pr
     console.error('Error updating user:', axiosError.response?.data || axiosError.message);
     throw {
       message: axiosError.response?.data?.message || 'Failed to update user',
+      status: axiosError.response?.status
+    };
+  }
+};
+
+export const getAllUsers = async (): Promise<User[]> => {
+  try {
+    const response = await axios.get<User[]>(API_URL);
+    return response.data;
+  } catch (error) {
+    const axiosError = error as AxiosError<APIError>;
+    console.error('Error fetching users:', axiosError.response?.data || axiosError.message);
+    throw {
+      message: axiosError.response?.data?.message || 'Failed to fetch users',
+      status: axiosError.response?.status
+    };
+  }
+};
+
+export const deleteUser = async (userId: string): Promise<void> => {
+  try {
+    await axios.delete(`${API_URL}/${userId}`);
+  } catch (error) {
+    const axiosError = error as AxiosError<APIError>;
+    console.error('Error deleting user:', axiosError.response?.data || axiosError.message);
+    throw {
+      message: axiosError.response?.data?.message || 'Failed to delete user',
       status: axiosError.response?.status
     };
   }

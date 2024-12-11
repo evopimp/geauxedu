@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
-import { createUser } from '../api/userApi';
+import { createUser } from '../api/userApi.ts';
 import { useStore } from '../store/useStore';
 
 const Signup = () => {
   const { setUser } = useStore();
   const navigate = useNavigate();
+  const [error, setError] = useState<string | null>(null);
+
+  const validationSchema = Yup.object({
+    name: Yup.string().required('Required'),
+    email: Yup.string().email('Invalid email address').required('Required'),
+    password: Yup.string()
+      .min(6, 'Must be at least 6 characters')
+      .required('Required'),
+    confirmPassword: Yup.string()
+      .required('Required')
+      .test('passwords-match', 'Passwords must match', function(value) {
+        return value === this.parent.password;
+      }),
+    avatar: Yup.string().url('Invalid URL').required('Required'),
+  });
 
   const formik = useFormik({
     initialValues: {
@@ -17,24 +32,14 @@ const Signup = () => {
       confirmPassword: '',
       avatar: '',
     },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      password: Yup.string()
-        .min(6, 'Must be at least 6 characters')
-        .required('Required'),
-      confirmPassword: Yup.string()
-        .oneOf([formik.values.password], 'Passwords must match')
-        .required('Required'),
-      avatar: Yup.string().url('Invalid URL').required('Required'),
-    }),
+    validationSchema,
     onSubmit: async (values) => {
       try {
-        console.log('Submitting signup form:', values);
+        setError(null);
         const newUser = {
           name: values.name,
           email: values.email,
-          password: values.password,
+          password: values.password, // Send plain password, backend will hash it
           learningStyles: {
             visual: 0,
             auditory: 0,
@@ -44,16 +49,19 @@ const Signup = () => {
           streak: 0,
           avatar: values.avatar,
         };
-        console.log('Sending user data:', newUser);
         const createdUser = await createUser(newUser);
-        console.log('Created user:', createdUser);
-        if (createdUser) {
-          setUser(createdUser);
-          navigate('/profile');
-        }
+        setUser({
+          _id: createdUser._id,
+          name: createdUser.name,
+          email: createdUser.email,
+          learningStyles: createdUser.learningStyles,
+          streak: createdUser.streak,
+          avatar: createdUser.avatar,
+          password: '' // Don't store password in frontend state
+        });
+        navigate('/profile');
       } catch (error) {
-        console.error('Signup error:', error);
-        // Add user feedback here
+        setError(error instanceof Error ? error.message : 'An unexpected error occurred');
       }
     },
   });
@@ -61,6 +69,11 @@ const Signup = () => {
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6">Sign Up</h2>
+      {error && (
+        <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+          {error}
+        </div>
+      )}
       <form onSubmit={formik.handleSubmit}>
         {/* Name Field */}
         <div className="mb-4">

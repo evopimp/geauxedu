@@ -16,7 +16,10 @@ const logger = winston.createLogger({
   ],
 });
 
-const uri = process.env.MONGODB_URI || 'mongodb+srv://wicked:u46daRH2NhFd9lHI@geaux-contentai.9pqv0ok.mongodb.net/?retryWrites=true&w=majority&appName=geaux-contentai';
+const uri = process.env.MONGODB_URI;
+if (!uri) {
+  throw new Error('MONGODB_URI environment variable is not set');
+}
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -31,8 +34,10 @@ let db;
 export const connectDB = async () => {
   if (!db) {
     try {
-      await client.connect();
-      db = client.db(process.env.DB_NAME || 'geauxacademy');
+      const connection = await client.connect();
+      db = connection.db(process.env.DB_NAME || 'geauxacademy');
+      // Test the connection
+      await db.command({ ping: 1 });
       logger.info('Connected to MongoDB successfully');
     } catch (error) {
       logger.error('MongoDB connection error:', error);
