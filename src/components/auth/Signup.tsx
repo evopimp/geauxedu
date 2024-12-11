@@ -88,9 +88,27 @@ const Signup = () => {
     },
   });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    formik.handleSubmit();
+  const handleSubmit = async (values: FormValues) => {
+    try {
+      const userData = {
+        name: values.name,
+        email: values.email,
+        password: values.password,
+        learningStyles: [],
+        streak: 0,
+        avatar: values.avatar
+      };
+      
+      const user = await createUser(userData);
+      setUser(user);
+      navigate('/assessment');
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        setError(error.response?.data?.message || 'Failed to create user');
+      } else {
+        setError('An unexpected error occurred');
+      }
+    }
   };
 
   return (

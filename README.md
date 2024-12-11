@@ -1,10 +1,34 @@
 # Geaux Academy
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Geaux Academy is an educational platform that helps users discover their learning styles and provides personalized content based on those styles. Built with React, TypeScript, Vite, and Tailwind CSS.
+=======
+=======
+>>>>>>> Stashed changes
+An adaptive learning platform that personalizes educational content based on individual learning styles.
+
+## Overview
+
+Geaux Academy helps students identify their learning preferences through assessments and delivers customized course content optimized for their learning style. The platform supports visual, auditory, reading, and kinesthetic learning approaches.
+
+## Features
+
+- Learning style assessment
+- Personalized user profiles
+- Learning progress tracking
+- Custom course creation
+- Adaptive content delivery
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 ## Getting Started
 
 ### Prerequisites
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - Node.js (>= 14.x)
 - npm (>= 6.x) or yarn (>= 1.x)
 
@@ -78,3 +102,86 @@ Roadmap
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+=======
+=======
+>>>>>>> Stashed changes
+
+- Node.js 18 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies 
+''bash
+    npm install
+
+3. Start the development server
+''bash 
+    npm run dev
+
+
+    Project Roadmap
+Phase 1 - Core Features (Current)
+<input checked="" disabled="" type="checkbox"> Learning style assessment
+<input checked="" disabled="" type="checkbox"> Basic user profiles
+<input checked="" disabled="" type="checkbox"> Course creation interface
+<input disabled="" type="checkbox"> Integration with OpenAI for content generation
+<input disabled="" type="checkbox"> Course content delivery system
+Phase 2 - Enhanced Features
+<input disabled="" type="checkbox"> Progress tracking analytics
+<input disabled="" type="checkbox"> Learning path recommendations
+<input disabled="" type="checkbox"> Social learning features
+<input disabled="" type="checkbox"> Content sharing capabilities
+<input disabled="" type="checkbox"> Mobile responsive design improvements
+Phase 3 - Advanced Features
+<input disabled="" type="checkbox"> Real-time collaboration tools
+<input disabled="" type="checkbox"> AI-powered learning insights
+<input disabled="" type="checkbox"> Advanced analytics dashboard
+<input disabled="" type="checkbox"> Content marketplace
+<input disabled="" type="checkbox"> API for third-party integrations
+
+
+Contributing
+We welcome contributions! Here's how you can help:
+
+Fork the repository
+Create a feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+Priority Areas for Contribution
+OpenAI Integration
+
+Implement content generation system
+Add content adaptation algorithms
+User Experience
+
+Enhance assessment interface
+Improve course content presentation
+Add interactive learning elements
+Backend Development
+
+Implement user authentication
+Add data persistence
+Create API endpoints
+Tech Stack
+React 18
+TypeScript
+Vite
+Tailwind CSS
+Framer Motion
+Zustand
+React Router
+Recharts
+OpenAI API (planned)
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Contact
+<<<<<<< Updated upstream
+Project Link: https://github.com/evopimp/geauxedu
+>>>>>>> Stashed changes
+=======
+Project Link: https://github.com/evopimp/geauxedu
+>>>>>>> Stashed changes

@@ -1,7 +1,16 @@
 import axios, { AxiosError } from 'axios';
 import { User } from '../types';
 
-const API_URL = 'http://localhost:5000/api/users';
+const API_URL = process.env.VITE_API_URL || 'http://localhost:5000/api/users';
+
+// Add request timeout and error handling
+const api = axios.create({
+  baseURL: API_URL,
+  timeout: 5000,
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
 
 interface APIError {
   message: string;
@@ -15,7 +24,7 @@ interface AuthResponse {
 
 export const createUser = async (userData: Partial<User>): Promise<User> => {
   try {
-    const response = await axios.post<User>(API_URL, userData);
+    const response = await api.post<User>(API_URL, userData);
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<APIError>;
@@ -30,7 +39,7 @@ export const createUser = async (userData: Partial<User>): Promise<User> => {
 export const findUserByEmail = async (email: string): Promise<User | null> => {
   try {
     // Fix: Update to match the route in userRoutes.js
-    const response = await axios.get<User>(`${API_URL}/email`, {
+    const response = await api.get<User>(`${API_URL}/email`, {
       params: { email }
     });
     return response.data;
@@ -45,7 +54,7 @@ export const findUserByEmail = async (email: string): Promise<User | null> => {
 
 export const updateUserStreak = async (email: string, streak: number): Promise<User> => {
   try {
-    const response = await axios.put<User>(`${API_URL}/streak`, { email, streak });
+    const response = await api.put<User>(`${API_URL}/streak`, { email, streak });
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<APIError>;
@@ -59,7 +68,7 @@ export const updateUserStreak = async (email: string, streak: number): Promise<U
 
 export const updateUser = async (userId: string, userDetails: Partial<User>): Promise<User> => {
   try {
-    const response = await axios.put<User>(`${API_URL}/${userId}`, userDetails);
+    const response = await api.put<User>(`${API_URL}/${userId}`, userDetails);
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<APIError>;
@@ -73,7 +82,7 @@ export const updateUser = async (userId: string, userDetails: Partial<User>): Pr
 
 export const getAllUsers = async (): Promise<User[]> => {
   try {
-    const response = await axios.get<User[]>(API_URL);
+    const response = await api.get<User[]>(API_URL);
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<APIError>;
@@ -87,7 +96,7 @@ export const getAllUsers = async (): Promise<User[]> => {
 
 export const deleteUser = async (userId: string): Promise<void> => {
   try {
-    await axios.delete(`${API_URL}/${userId}`);
+    await api.delete(`${API_URL}/${userId}`);
   } catch (error) {
     const axiosError = error as AxiosError<APIError>;
     console.error('Error deleting user:', axiosError.response?.data || axiosError.message);
@@ -100,7 +109,7 @@ export const deleteUser = async (userId: string): Promise<void> => {
 
 export const signIn = async (email: string, password: string): Promise<AuthResponse> => {
   try {
-    const response = await axios.post<AuthResponse>(`${API_URL}/signin`, {
+    const response = await api.post<AuthResponse>(`${API_URL}/signin`, {
       email,
       password
     });

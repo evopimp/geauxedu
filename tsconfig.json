@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "target": "ES6",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -19,3 +21,25 @@
   },
   "include": ["src"]
 }
+=======
+=======
+>>>>>>> Stashed changes
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react"
+  },
+  "include": ["src"],
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+>>>>>>> Stashed changes
