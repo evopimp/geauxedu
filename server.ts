@@ -1,7 +1,7 @@
 // src/server.ts
 import express from 'express';
 import chatRouter from './api/chat';
-import userRoutes from './routes/userRoutes';
+import userRoutes from './routes/userRoutes'; // Import without extension
 
 const app = express();
 app.use(express.json());

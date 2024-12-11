@@ -23,7 +23,12 @@ Geaux Academy is an educational platform that helps users discover their learnin
     npm run dev
     yarn dev
 
-
+4. run server
+''bash 
+    node server.js
+        or
+    npm run server
+    
 Scripts
 
 dev: Starts the development server.

@@ -1,5 +1,7 @@
 /home/wicked/geauxedu/src//api/
 ├── api_tree.txt
+├── chat.ts
+├── openaiClient.ts
 └── userApi.ts
 
-1 directory, 2 files
+1 directory, 4 files

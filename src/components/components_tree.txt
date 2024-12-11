@@ -1,4 +1,5 @@
 /home/wicked/geauxedu/src//components/
+├── ChatUI.tsx
 ├── CourseCreation.tsx
 ├── ErrorBoundary.tsx
 ├── LearningStyleAssessment.tsx
@@ -8,4 +9,4 @@
 ├── UserProfile.tsx
 └── components_tree.txt
 
-1 directory, 8 files
+1 directory, 9 files

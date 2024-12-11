@@ -1,5 +1,5 @@
 /home/wicked/geauxedu/src//controllers/
 ├── controllers_tree.txt
-└── userController.js
+└── userController.ts
 
 1 directory, 2 files

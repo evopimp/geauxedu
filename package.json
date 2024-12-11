@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "nodemon --watch src --exec 'node -r ts-node/register/esm src/server.ts'"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -51,9 +52,14 @@
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
     "mongosh": "^2.3.4",
+    "nodemon": "^3.1.7",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.3"
+  },
+  "nodemonConfig": {
+    "watch": ["src"],
+    "ext": "ts,json"
   }
 }

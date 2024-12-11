@@ -2,8 +2,11 @@
 ├── App.tsx
 ├── api
 │   ├── api_tree.txt
+│   ├── chat.ts
+│   ├── openaiClient.ts
 │   └── userApi.ts
 ├── components
+│   ├── ChatUI.tsx
 │   ├── CourseCreation.tsx
 │   ├── ErrorBoundary.tsx
 │   ├── LearningStyleAssessment.tsx
@@ -14,18 +17,19 @@
 │   └── components_tree.txt
 ├── controllers
 │   ├── controllers_tree.txt
-│   └── userController.js
+│   └── userController.ts
 ├── index.css
 ├── main.tsx
 ├── middleware
-│   ├── errorHandler.js
+│   ├── errorHandler.ts
 │   └── middleware_tree.txt
 ├── models
 │   ├── models_tree.txt
-│   └── userModel.js
+│   └── userModel.ts
 ├── routes
 │   ├── routes_tree.txt
-│   └── userRoutes.js
+│   └── userRoutes.ts
+├── server.ts
 ├── src_tree.txt
 ├── store
 │   ├── store_tree.txt
@@ -34,9 +38,10 @@
 │   ├── index.ts
 │   ├── types_tree.txt
 │   └── user.ts
+├── types.ts
 ├── utils
-│   ├── db.js
+│   ├── db.ts
 │   └── utils_tree.txt
 └── vite-env.d.ts
 
-10 directories, 30 files
+10 directories, 35 files
