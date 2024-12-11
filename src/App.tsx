@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import { BookOpen, User, PlusCircle, LogIn, UserPlus } from 'lucide-react';
 
-const LearningStyleAssessment = React.lazy(() => import('./components/LearningStyleAssessment'));
-const UserProfile = React.lazy(() => import('./components/UserProfile'));
-const CourseCreation = React.lazy(() => import('./components/CourseCreation'));
-const Signup = React.lazy(() => import('./components/Signup'));
+const LearningStyleAssessment = React.lazy(() => import('./components/assessment/LearningStyleAssessment'));
+const UserProfile = React.lazy(() => import('./components/user/UserProfile'));
+const Signup = React.lazy(() => import('./components/auth/Signup'));
 const Signin = React.lazy(() => import('./components/auth/Signin'));
-const UserDashboard = React.lazy(() => import('./components/UserDashboard'));
+const UserDashboard = React.lazy(() => import('./components/user/UserDashboard').then(m => ({ default: m.UserDashboard })));
+const CourseCreation = React.lazy(() => import('./components/course/CourseCreation').then(m => ({ default: m.CourseCreation })));
 
 function App() {
   return (

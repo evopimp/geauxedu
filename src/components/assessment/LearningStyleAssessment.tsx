@@ -1,66 +1,49 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useStore } from '../store/useStore';
-import { LearningStyle } from '../types'; // Add this import
+import { sendChatMessage } from '../../api/chat';
+import type { AssessmentState } from '../../types/learningStyle';
 
-const questions = [
-  {
-    id: 1,
-    text: "When learning something new, I prefer to:",
-    options: [
-      "Read written instructions",
-      "Listen to verbal explanations",
-      "Try it hands-on myself",
-    ],
-  },
-  {
-    id: 2,
-    text: "I remember information best when:",
-    options: [
-      "I see it written down",
-      "I hear it explained",
-      "I physically practice it",
-    ],
-  },
-];
+export const LearningStyleAssessment: React.FC = () => {
+  const [state, setState] = useState<AssessmentState>({
+    currentQuestion: 0,
+    responses: [],
+    learningStyles: [],
+    isComplete: false
+  });
+  const [userInput, setUserInput] = useState('');
+  const [messages, setMessages] = useState<string[]>([
+    "Hi! I'm here to help identify your learning style. Let's have a conversation about how you prefer to learn. What's your favorite way to learn something new?"
+  ]);
 
-export const LearningStyleAssessment = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
-  const { updateLearningStyle } = useStore();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!userInput.trim()) return;
 
-  const handleAnswer = (answer: string) => {
-    const newAnswers = {
-      ...answers,
-      [currentQuestion]: answer
-    };
-    setAnswers(newAnswers);
-    
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(prev => prev + 1);
-    } else {
-      // Calculate and update learning style when assessment is complete
-      const learningStyles = calculateLearningStyles(newAnswers);
-      updateLearningStyle(learningStyles, 'primary'); // Add missing 'primary' argument
+    // Add user message to chat
+    const updatedMessages = [...messages, `You: ${userInput}`];
+    setMessages(updatedMessages);
+
+    try {
+      // Send to Azure OpenAI
+      const response = await sendChatMessage({
+        messages: updatedMessages,
+        context: "You are an educational expert analyzing learning styles. Ask questions to determine the student's learning preferences between visual, auditory, reading/writing, and kinesthetic styles. Be conversational and engaging."
+      });
+
+      // Update chat with AI response
+      setMessages([...updatedMessages, `Assistant: ${response.reply}`]);
+      
+      // Update assessment state
+      setState(prev => ({
+        ...prev,
+        responses: [...prev.responses, userInput],
+        currentQuestion: prev.currentQuestion + 1
+      }));
+
+      setUserInput('');
+    } catch (error) {
+      console.error('Error:', error);
     }
-  };
-
-  const calculateLearningStyles = (answers: Record<string, string>): LearningStyle => {
-    let visual = 0, auditory = 0, reading = 0, kinesthetic = 0;
-
-    Object.values(answers).forEach(answer => {
-      if (answer.includes('written') || answer.includes('see')) reading += 1;
-      if (answer.includes('listen') || answer.includes('hear')) auditory += 1;
-      if (answer.includes('hands-on') || answer.includes('physically')) kinesthetic += 1;
-    });
-
-    // Return the dominant learning style as a string
-    const scores = { visual, auditory, reading, kinesthetic };
-    const dominantStyle = Object.entries(scores).reduce((a, b) => 
-      scores[a[0]] > scores[b[0]] ? a : b
-    )[0] as LearningStyle;
-
-    return dominantStyle;
   };
 
   return (
@@ -69,30 +52,50 @@ export const LearningStyleAssessment = () => {
       animate={{ opacity: 1 }}
       className="max-w-2xl mx-auto p-6"
     >
-      <h1 className="text-3xl font-bold mb-8">Learning Style Assessment</h1>
-      {currentQuestion < questions.length ? (
-        <div className="space-y-6">
-          <h2 className="text-xl font-semibold">
-            {questions[currentQuestion].text}
-          </h2>
-          <div className="space-y-3">
-            {questions[currentQuestion].options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswer(option)}
-                className="w-full p-4 text-left border rounded-lg hover:bg-gray-50"
-              >
-                {option}
-              </button>
-            ))}
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-bold mb-6">Learning Style Assessment</h2>
+        
+        {state.isComplete ? (
+          <div className="text-green-600 font-semibold mb-4">
+            Assessment Complete! We'll analyze your responses to determine your learning style.
           </div>
+        ) : (
+          <div className="text-gray-600 mb-4">
+            Question {state.currentQuestion + 1}
+          </div>
+        )}
+
+        <div className="space-y-4 mb-6">
+          {messages.map((message, index) => (
+            <div 
+              key={index}
+              className={`p-3 rounded-lg ${
+                message.startsWith('You:') 
+                  ? 'bg-blue-100 ml-auto' 
+                  : 'bg-gray-100'
+              }`}
+            >
+              {message}
+            </div>
+          ))}
         </div>
-      ) : (
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold">Assessment Complete!</h2>
-          <p className="mt-4">Thank you for completing the assessment.</p>
-        </div>
-      )}
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            className="w-full p-2 border rounded"
+            placeholder="Type your response..."
+          />
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+          >
+            Send
+          </button>
+        </form>
+      </div>
     </motion.div>
   );
 };

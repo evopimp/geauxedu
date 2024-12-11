@@ -2,7 +2,7 @@ export interface Course {
   id: string;
   title: string;
   description: string;
-  content: CourseContent[];
+  content: Array<any>; // Define specific content type based on your needs
 }
 
 export interface CourseContent {

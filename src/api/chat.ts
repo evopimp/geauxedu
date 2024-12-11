@@ -1,8 +1,41 @@
 // src/api/chat.ts
 import express from 'express';
-import { client } from './openaiClient';
+import { OpenAIClient } from '@azure/openai';
+import { env } from '../config/env';
 
 const router = express.Router();
+
+interface ChatRequest {
+  messages: string[];
+  context: string;
+}
+
+export const sendChatMessage = async (request: ChatRequest) => {
+  const client = new OpenAIClient(
+    env.AZURE_OPENAI_ENDPOINT,
+    { key: env.AZURE_OPENAI_API_KEY }
+  );
+
+  try {
+    const response = await client.getChatCompletions(
+      'gpt-4',
+      [
+        { role: 'system', content: request.context },
+        ...request.messages.map(msg => ({
+          role: msg.startsWith('You:') ? 'user' : 'assistant',
+          content: msg.substring(msg.indexOf(':') + 2)
+        }))
+      ]
+    );
+
+    return {
+      reply: response.choices[0].message?.content || 'No response'
+    };
+  } catch (error) {
+    console.error('Chat API Error:', error);
+    throw error;
+  }
+};
 
 router.post('/chat', async (req, res) => {
   const { message } = req.body;

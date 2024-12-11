@@ -1,10 +1,10 @@
 // src/server.ts
 import express from 'express';
 import cors from 'cors';
-import { env } from './config/env';
-import { chatRouter } from './routes/chatRoutes';
-import { userRouter } from './routes/userRoutes';
-import { errorHandler } from './middleware/errorHandler';
+import { env } from '@/config/env';
+import { chatRouter } from '@/server/routes/chatRoutes';
+import { userRouter } from '@/server/routes/userRoutes';
+import { errorHandler } from '@/server/middleware/errorHandler';
 
 const app = express();
 

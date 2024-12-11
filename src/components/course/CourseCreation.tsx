@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { type Course } from '@/types/course';
-import { useStore } from '@/store/useStore';
+import { Course } from '../../types/course';
+import { useStore } from '../../store/useStore';
 // import { LearningStyle } from '../types';
 
 export const CourseCreation = () => {
@@ -59,3 +59,5 @@ export const CourseCreation = () => {
     </motion.div>
   );
 };
+
+export default CourseCreation;
