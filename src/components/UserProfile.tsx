@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '../store/useStore';
-import { Radar } from 'recharts';
+import { RadarChart, Radar, PolarGrid, PolarAngleAxis } from 'recharts';
 import { updateUserStreak } from '../api/userApi';
 
-export const UserProfile = () => {
+const UserProfile: React.FC = () => {
   const { user, setUser } = useStore();
 
   if (!user) return null;
@@ -30,16 +30,17 @@ export const UserProfile = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold mb-4">Learning Style Profile</h2>
-          <Radar
-            width={300}
-            height={300}
-            data={learningStyleData}
-            dataKey="value"
-            name="Learning Style"
-            stroke="#8884d8"
-            fill="#8884d8"
-            fillOpacity={0.6}
-          />
+          <RadarChart width={300} height={300} data={learningStyleData}>
+            <PolarGrid />
+            <PolarAngleAxis dataKey="subject" />
+            <Radar
+              name="Learning Style"
+              dataKey="value"
+              stroke="#8884d8"
+              fill="#8884d8"
+              fillOpacity={0.6}
+            />
+          </RadarChart>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold mb-4">Learning Streak</h2>
@@ -55,3 +56,5 @@ export const UserProfile = () => {
     </motion.div>
   );
 };
+
+export default UserProfile;

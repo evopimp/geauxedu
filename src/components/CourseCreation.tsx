@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '../store/useStore';
-import { Course, LearningStyle } from '../types';
+// import { LearningStyle } from '../types';
 
 export const CourseCreation = () => {
   const [title, setTitle] = useState('');

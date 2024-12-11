@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React from 'react';
+import { useState, FormEvent } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
@@ -55,10 +56,15 @@ const Signup = () => {
     navigate('/profile');
   };
 
-  const handleSignupError = (error: any) => {
-    const errorMessage = error instanceof Error ? error.message : 'Failed to create account';
-    setError(errorMessage);
-    console.error('Signup error:', errorMessage);
+  const handleSignupError = (error: unknown) => {
+    if (error instanceof Error) {
+      const errorMessage = error.message;
+      setError(errorMessage);
+      console.error('Signup error:', errorMessage);
+    } else {
+      setError('An unknown error occurred');
+      console.error('Signup error:', error);
+    }
   };
 
   const formik = useFormik({
@@ -82,6 +88,11 @@ const Signup = () => {
     },
   });
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    formik.handleSubmit();
+  };
+
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6">Sign Up</h2>
@@ -92,7 +103,7 @@ const Signup = () => {
         </div>
       )}
 
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         {/* Name Field */}
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">

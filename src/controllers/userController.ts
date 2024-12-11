@@ -1,17 +1,19 @@
+import { Request, Response } from 'express';
 import User from '../models/userModel.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
-export const getAllUsers = async (req, res) => {
+export const getAllUsers = async (req: Request, res: Response) => {
   try {
     const users = await User.find();
     res.json(users);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error occurred';
+    res.status(500).json({ message });
   }
 };
 
-export const getUserByEmail = async (req, res) => {
+export const getUserByEmail = async (req: Request, res: Response) => {
   try {
     const { email } = req.query;
     const user = await User.findOne({ email });
@@ -25,13 +27,14 @@ export const getUserByEmail = async (req, res) => {
     delete userResponse.password;
     
     res.json(userResponse);
-  } catch (error) {
-    console.error('Get user error:', error);
-    res.status(500).json({ message: error.message });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error occurred';
+    console.error('Get user error:', message);
+    res.status(500).json({ message });
   }
 };
 
-export const createUser = async (req, res) => {
+export const createUser = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
     
@@ -57,23 +60,25 @@ export const createUser = async (req, res) => {
     delete userResponse.password;
     
     res.status(201).json(userResponse);
-  } catch (error) {
-    console.error('Create user error:', error);
-    res.status(500).json({ message: error.message });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error occurred';
+    console.error('Create user error:', message);
+    res.status(500).json({ message });
   }
 };
 
-export const updateUser = async (req, res) => {
+export const updateUser = async (req: Request, res: Response) => {
   try {
     const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!user) return res.status(404).json({ message: 'User not found' });
     res.json(user);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error occurred';
+    res.status(500).json({ message });
   }
 };
 
-export const updateUserStreak = async (req, res) => {
+export const updateUserStreak = async (req: Request, res: Response) => {
   try {
     const user = await User.findOneAndUpdate(
       { email: req.body.email },
@@ -82,22 +87,24 @@ export const updateUserStreak = async (req, res) => {
     );
     if (!user) return res.status(404).json({ message: 'User not found' });
     res.json(user);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error occurred';
+    res.status(500).json({ message });
   }
 };
 
-export const deleteUser = async (req, res) => {
+export const deleteUser = async (req: Request, res: Response) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);
     if (!user) return res.status(404).json({ message: 'User not found' });
     res.json({ message: 'User deleted' });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error occurred';
+    res.status(500).json({ message });
   }
 };
 
-export const signIn = async (req, res) => {
+export const signIn = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
     
@@ -106,6 +113,10 @@ export const signIn = async (req, res) => {
     
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (!user.password || !password) {
+      return res.status(400).json({ message: 'Invalid credentials' });
     }
 
     // Compare password
@@ -130,8 +141,9 @@ export const signIn = async (req, res) => {
       user: userResponse,
       token
     });
-  } catch (error) {
-    console.error('Sign in error:', error);
-    res.status(500).json({ message: error.message });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error occurred';
+    console.error('Sign in error:', message);
+    res.status(500).json({ message });
   }
 };
