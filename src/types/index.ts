@@ -1,8 +1,10 @@
 export type LearningStyle = 'visual' | 'auditory' | 'reading' | 'kinesthetic';
 
 export interface User {
-  id: string;
+  _id?: string;
   name: string;
+  email: string;
+  password: string;
   learningStyles: Record<LearningStyle, number>;
   streak: number;
   avatar: string;
@@ -21,4 +23,10 @@ export interface CourseContent {
   title: string;
   content: string;
   learningStyle: LearningStyle;
+}
+
+export interface APIResponse<T> {
+  data?: T;
+  message?: string;
+  status: number;
 }

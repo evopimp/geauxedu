@@ -3,7 +3,8 @@
 ├── LearningStyleAssessment.tsx
 ├── Signin.tsx
 ├── Signup.tsx
+├── UserDashboard.tsx
 ├── UserProfile.tsx
 └── components_tree.txt
 
-1 directory, 6 files
+1 directory, 7 files

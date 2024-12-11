@@ -8,21 +8,31 @@
 │   ├── LearningStyleAssessment.tsx
 │   ├── Signin.tsx
 │   ├── Signup.tsx
+│   ├── UserDashboard.tsx
 │   ├── UserProfile.tsx
 │   └── components_tree.txt
+├── controllers
+│   └── userController.js
 ├── index.css
 ├── main.tsx
+├── middleware
+│   └── errorHandler.js
 ├── models
+│   ├── models_tree.txt
 │   └── userModel.js
 ├── routes
+│   ├── routes_tree.txt
 │   └── userRoutes.js
 ├── src_tree.txt
 ├── store
+│   ├── store_tree.txt
 │   └── useStore.ts
 ├── types
-│   └── index.ts
+│   ├── index.ts
+│   └── types_tree.txt
 ├── utils
-│   └── db.js
+│   ├── db.js
+│   └── utils_tree.txt
 └── vite-env.d.ts
 
-8 directories, 18 files
+10 directories, 26 files

@@ -1,30 +1,15 @@
 // userModel.js
-import { connectDB } from '../utils/db.js'; // Ensure the correct path
-import bcrypt from 'bcryptjs';
+import mongoose from 'mongoose';
 
-const getUserCollection = async () => {
-  const db = await connectDB();
-  return db.collection('users');
-};
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  password: String,
+  learningStyles: Object,
+  streak: Number,
+  avatar: String,
+});
 
-export const createUser = async (user) => {
-  const users = await getUserCollection();
-  const hashedPassword = await bcrypt.hash(user.password, 10);
-  const result = await users.insertOne({ ...user, password: hashedPassword });
-  return result.ops[0];
-};
+const User = mongoose.model('User', userSchema);
 
-export const findUserByEmail = async (email) => {
-  const users = await getUserCollection();
-  return await users.findOne({ email });
-};
-
-export const updateUserPassword = async (email, newPassword) => {
-  const users = await getUserCollection();
-  const hashedPassword = await bcrypt.hash(newPassword, 10);
-  const result = await users.updateOne(
-    { email },
-    { $set: { password: hashedPassword } }
-  );
-  return result.modifiedCount > 0;
-};
+export default User;
