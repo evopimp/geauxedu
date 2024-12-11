@@ -1,4 +1,4 @@
-/home/wicked/geauxedu/src//middleware/
+/home/wicked/geauxedu/src//server//middleware/
 ├── errorHandler.ts
 └── middleware_tree.txt
 

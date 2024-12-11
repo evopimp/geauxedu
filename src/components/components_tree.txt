@@ -1,12 +1,18 @@
 /home/wicked/geauxedu/src//components/
-├── ChatUI.tsx
-├── CourseCreation.tsx
-├── ErrorBoundary.tsx
-├── LearningStyleAssessment.tsx
-├── Signin.tsx
-├── Signup.tsx
-├── UserDashboard.tsx
-├── UserProfile.tsx
-└── components_tree.txt
+├── assessment
+│   └── LearningStyleAssessment.tsx
+├── auth
+│   ├── Signin.tsx
+│   └── Signup.tsx
+├── chat
+│   └── ChatUI.tsx
+├── common
+│   └── ErrorBoundary.tsx
+├── components_tree.txt
+├── course
+│   └── CourseCreation.tsx
+└── user
+    ├── UserDashboard.tsx
+    └── UserProfile.tsx
 
-1 directory, 9 files
+7 directories, 9 files

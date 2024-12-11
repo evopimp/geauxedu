@@ -1,0 +1,6 @@
+/home/wicked/geauxedu/config/
+├── config_tree.txt
+├── eslint.config.js
+└── postcss.config.cjs
+
+1 directory, 3 files

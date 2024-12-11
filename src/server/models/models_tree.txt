@@ -1,4 +1,4 @@
-/home/wicked/geauxedu/src//models/
+/home/wicked/geauxedu/src//server//models/
 ├── models_tree.txt
 └── userModel.ts
 

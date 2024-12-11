@@ -1,0 +1,16 @@
+/home/wicked/geauxedu/src//server/
+├── controllers
+│   ├── controllers_tree.txt
+│   └── userController.ts
+├── middleware
+│   ├── errorHandler.ts
+│   └── middleware_tree.txt
+├── models
+│   ├── models_tree.txt
+│   └── userModel.ts
+├── routes
+│   ├── routes_tree.txt
+│   └── userRoutes.ts
+└── server_tree.txt
+
+5 directories, 9 files

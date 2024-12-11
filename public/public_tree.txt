@@ -1,0 +1,4 @@
+/home/wicked/geauxedu/public/
+└── public_tree.txt
+
+1 directory, 1 file

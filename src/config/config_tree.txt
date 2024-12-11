@@ -1,0 +1,5 @@
+/home/wicked/geauxedu/src//config/
+├── config_tree.txt
+└── env.ts
+
+1 directory, 2 files

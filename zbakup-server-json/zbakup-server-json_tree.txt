@@ -1,0 +1,7 @@
+/home/wicked/geauxedu/zbakup-server-json/
+├── bingsearch.md
+├── postcss.config.ts
+├── server.js
+└── zbakup-server-json_tree.txt
+
+1 directory, 4 files

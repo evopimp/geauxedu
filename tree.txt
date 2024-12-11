@@ -1,8 +1,9 @@
 /home/wicked/geauxedu
 ├── DEVELOPMENT_GUIDE.md
 ├── README.md
-├── bingsearch.md
-├── eslint.config.js
+├── config
+│   ├── eslint.config.js
+│   └── postcss.config.cjs
 ├── generate_tree_files.sh
 ├── index.html
 ├── mongodb-mongosh_2.1.1_amd64.deb
@@ -7347,6 +7348,21 @@
 │   │   │   ├── README.md
 │   │   │   ├── index.d.ts
 │   │   │   └── package.json
+│   │   ├── body-parser
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── connect
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── cors
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
 │   │   ├── d3-array
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -7398,7 +7414,22 @@
 │   │   │   ├── flow.d.ts
 │   │   │   ├── index.d.ts
 │   │   │   └── package.json
+│   │   ├── express
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── express-serve-static-core
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
 │   │   ├── hoist-non-react-statics
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── http-errors
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
 │   │   │   ├── index.d.ts
@@ -7412,6 +7443,13 @@
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
 │   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── mime
+│   │   │   ├── LICENSE
+│   │   │   ├── Mime.d.ts
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   ├── lite.d.ts
 │   │   │   └── package.json
 │   │   ├── node
 │   │   │   ├── LICENSE
@@ -7500,6 +7538,16 @@
 │   │   │   ├── README.md
 │   │   │   ├── index.d.ts
 │   │   │   └── package.json
+│   │   ├── qs
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── range-parser
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
 │   │   ├── react
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -7528,6 +7576,16 @@
 │   │   │   ├── server.d.ts
 │   │   │   └── test-utils
 │   │   │       └── index.d.ts
+│   │   ├── send
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── serve-static
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
 │   │   ├── webidl-conversions
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -18633,6 +18691,11 @@
 │   │   ├── index.js
 │   │   ├── legacy.js
 │   │   └── package.json
+│   ├── ignore-by-default
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
 │   ├── import-fresh
 │   │   ├── index.d.ts
 │   │   ├── index.js
@@ -26578,6 +26641,80 @@
 │   │   │   └── release-schedule
 │   │   │       └── release-schedule.json
 │   │   └── package.json
+│   ├── nodemon
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── bin
+│   │   │   ├── nodemon.js
+│   │   │   └── windows-kill.exe
+│   │   ├── doc
+│   │   │   └── cli
+│   │   │       ├── authors.txt
+│   │   │       ├── config.txt
+│   │   │       ├── help.txt
+│   │   │       ├── logo.txt
+│   │   │       ├── options.txt
+│   │   │       ├── topics.txt
+│   │   │       ├── usage.txt
+│   │   │       └── whoami.txt
+│   │   ├── index.d.ts
+│   │   ├── jsconfig.json
+│   │   ├── lib
+│   │   │   ├── cli
+│   │   │   │   ├── index.js
+│   │   │   │   └── parse.js
+│   │   │   ├── config
+│   │   │   │   ├── command.js
+│   │   │   │   ├── defaults.js
+│   │   │   │   ├── exec.js
+│   │   │   │   ├── index.js
+│   │   │   │   └── load.js
+│   │   │   ├── help
+│   │   │   │   └── index.js
+│   │   │   ├── index.js
+│   │   │   ├── monitor
+│   │   │   │   ├── index.js
+│   │   │   │   ├── match.js
+│   │   │   │   ├── run.js
+│   │   │   │   ├── signals.js
+│   │   │   │   └── watch.js
+│   │   │   ├── nodemon.js
+│   │   │   ├── rules
+│   │   │   │   ├── add.js
+│   │   │   │   ├── index.js
+│   │   │   │   └── parse.js
+│   │   │   ├── spawn.js
+│   │   │   ├── utils
+│   │   │   │   ├── bus.js
+│   │   │   │   ├── clone.js
+│   │   │   │   ├── colour.js
+│   │   │   │   ├── index.js
+│   │   │   │   ├── log.js
+│   │   │   │   └── merge.js
+│   │   │   └── version.js
+│   │   ├── node_modules
+│   │   │   ├── brace-expansion
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── README.md
+│   │   │   │   ├── index.js
+│   │   │   │   └── package.json
+│   │   │   ├── has-flag
+│   │   │   │   ├── index.js
+│   │   │   │   ├── license
+│   │   │   │   ├── package.json
+│   │   │   │   └── readme.md
+│   │   │   ├── minimatch
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── README.md
+│   │   │   │   ├── minimatch.js
+│   │   │   │   └── package.json
+│   │   │   └── supports-color
+│   │   │       ├── browser.js
+│   │   │       ├── index.js
+│   │   │       ├── license
+│   │   │       ├── package.json
+│   │   │       └── readme.md
+│   │   └── package.json
 │   ├── nopt
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -28666,6 +28803,20 @@
 │   │   ├── README.md
 │   │   ├── index.js
 │   │   └── package.json
+│   ├── pstree.remy
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── lib
+│   │   │   ├── index.js
+│   │   │   ├── tree.js
+│   │   │   └── utils.js
+│   │   ├── package.json
+│   │   └── tests
+│   │       ├── fixtures
+│   │       │   ├── index.js
+│   │       │   ├── out1
+│   │       │   └── out2
+│   │       └── index.test.js
 │   ├── pump
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -30116,6 +30267,25 @@
 │   │   ├── README.md
 │   │   ├── index.js
 │   │   └── package.json
+│   ├── simple-update-notifier
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── build
+│   │   │   ├── index.d.ts
+│   │   │   └── index.js
+│   │   ├── package.json
+│   │   └── src
+│   │       ├── borderedText.ts
+│   │       ├── cache.spec.ts
+│   │       ├── cache.ts
+│   │       ├── getDistVersion.spec.ts
+│   │       ├── getDistVersion.ts
+│   │       ├── hasNewVersion.spec.ts
+│   │       ├── hasNewVersion.ts
+│   │       ├── index.spec.ts
+│   │       ├── index.ts
+│   │       ├── isNpmOrYarn.ts
+│   │       └── types.ts
 │   ├── smart-buffer
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -31435,6 +31605,13 @@
 │   │   ├── index.js
 │   │   ├── package.json
 │   │   └── test.js
+│   ├── touch
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── bin
+│   │   │   └── nodetouch.js
+│   │   ├── index.js
+│   │   └── package.json
 │   ├── tr46
 │   │   ├── LICENSE.md
 │   │   ├── README.md
@@ -31779,14 +31956,13 @@
 │   │   │   ├── tsc
 │   │   │   └── tsserver
 │   │   ├── lib
-│   │   │   ├── _tsc.js
-│   │   │   ├── _tsserver.js
-│   │   │   ├── _typingsInstaller.js
+│   │   │   ├── README.md
 │   │   │   ├── cancellationToken.js
 │   │   │   ├── cs
 │   │   │   │   └── diagnosticMessages.generated.json
 │   │   │   ├── de
 │   │   │   │   └── diagnosticMessages.generated.json
+│   │   │   ├── dynamicImportCompat.js
 │   │   │   ├── es
 │   │   │   │   └── diagnosticMessages.generated.json
 │   │   │   ├── fr
@@ -31798,9 +31974,6 @@
 │   │   │   ├── ko
 │   │   │   │   └── diagnosticMessages.generated.json
 │   │   │   ├── lib.d.ts
-│   │   │   ├── lib.decorators.d.ts
-│   │   │   ├── lib.decorators.legacy.d.ts
-│   │   │   ├── lib.dom.asynciterable.d.ts
 │   │   │   ├── lib.dom.d.ts
 │   │   │   ├── lib.dom.iterable.d.ts
 │   │   │   ├── lib.es2015.collection.d.ts
@@ -31816,10 +31989,7 @@
 │   │   │   ├── lib.es2016.array.include.d.ts
 │   │   │   ├── lib.es2016.d.ts
 │   │   │   ├── lib.es2016.full.d.ts
-│   │   │   ├── lib.es2016.intl.d.ts
-│   │   │   ├── lib.es2017.arraybuffer.d.ts
 │   │   │   ├── lib.es2017.d.ts
-│   │   │   ├── lib.es2017.date.d.ts
 │   │   │   ├── lib.es2017.full.d.ts
 │   │   │   ├── lib.es2017.intl.d.ts
 │   │   │   ├── lib.es2017.object.d.ts
@@ -31862,39 +32032,23 @@
 │   │   │   ├── lib.es2022.full.d.ts
 │   │   │   ├── lib.es2022.intl.d.ts
 │   │   │   ├── lib.es2022.object.d.ts
-│   │   │   ├── lib.es2022.regexp.d.ts
+│   │   │   ├── lib.es2022.sharedmemory.d.ts
 │   │   │   ├── lib.es2022.string.d.ts
-│   │   │   ├── lib.es2023.array.d.ts
-│   │   │   ├── lib.es2023.collection.d.ts
-│   │   │   ├── lib.es2023.d.ts
-│   │   │   ├── lib.es2023.full.d.ts
-│   │   │   ├── lib.es2023.intl.d.ts
-│   │   │   ├── lib.es2024.arraybuffer.d.ts
-│   │   │   ├── lib.es2024.collection.d.ts
-│   │   │   ├── lib.es2024.d.ts
-│   │   │   ├── lib.es2024.full.d.ts
-│   │   │   ├── lib.es2024.object.d.ts
-│   │   │   ├── lib.es2024.promise.d.ts
-│   │   │   ├── lib.es2024.regexp.d.ts
-│   │   │   ├── lib.es2024.sharedmemory.d.ts
-│   │   │   ├── lib.es2024.string.d.ts
 │   │   │   ├── lib.es5.d.ts
 │   │   │   ├── lib.es6.d.ts
-│   │   │   ├── lib.esnext.array.d.ts
-│   │   │   ├── lib.esnext.collection.d.ts
 │   │   │   ├── lib.esnext.d.ts
-│   │   │   ├── lib.esnext.decorators.d.ts
-│   │   │   ├── lib.esnext.disposable.d.ts
 │   │   │   ├── lib.esnext.full.d.ts
 │   │   │   ├── lib.esnext.intl.d.ts
-│   │   │   ├── lib.esnext.iterator.d.ts
+│   │   │   ├── lib.esnext.promise.d.ts
+│   │   │   ├── lib.esnext.string.d.ts
+│   │   │   ├── lib.esnext.weakref.d.ts
 │   │   │   ├── lib.scripthost.d.ts
-│   │   │   ├── lib.webworker.asynciterable.d.ts
 │   │   │   ├── lib.webworker.d.ts
 │   │   │   ├── lib.webworker.importscripts.d.ts
 │   │   │   ├── lib.webworker.iterable.d.ts
 │   │   │   ├── pl
 │   │   │   │   └── diagnosticMessages.generated.json
+│   │   │   ├── protocol.d.ts
 │   │   │   ├── pt-br
 │   │   │   │   └── diagnosticMessages.generated.json
 │   │   │   ├── ru
@@ -31908,6 +32062,8 @@
 │   │   │   ├── typesMap.json
 │   │   │   ├── typescript.d.ts
 │   │   │   ├── typescript.js
+│   │   │   ├── typescriptServices.d.ts
+│   │   │   ├── typescriptServices.js
 │   │   │   ├── typingsInstaller.js
 │   │   │   ├── watchGuard.js
 │   │   │   ├── zh-cn
@@ -31923,6 +32079,13 @@
 │   │   ├── package.json
 │   │   └── test
 │   │       └── index.js
+│   ├── undefsafe
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── example.js
+│   │   ├── lib
+│   │   │   └── undefsafe.js
+│   │   └── package.json
 │   ├── undici-types
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -33322,9 +33485,8 @@
 │       └── vanilla.js
 ├── package-lock.json
 ├── package.json
-├── postcss.config.cjs
-├── postcss.config.ts
-├── server.js
+├── public
+├── server.ts
 ├── src
 │   ├── App.tsx
 │   ├── api
@@ -33333,35 +33495,45 @@
 │   │   ├── openaiClient.ts
 │   │   └── userApi.ts
 │   ├── components
-│   │   ├── ChatUI.tsx
-│   │   ├── CourseCreation.tsx
-│   │   ├── ErrorBoundary.tsx
-│   │   ├── LearningStyleAssessment.tsx
-│   │   ├── Signin.tsx
-│   │   ├── Signup.tsx
-│   │   ├── UserDashboard.tsx
-│   │   ├── UserProfile.tsx
-│   │   └── components_tree.txt
-│   ├── controllers
-│   │   ├── controllers_tree.txt
-│   │   └── userController.ts
+│   │   ├── assessment
+│   │   │   └── LearningStyleAssessment.tsx
+│   │   ├── auth
+│   │   │   ├── Signin.tsx
+│   │   │   └── Signup.tsx
+│   │   ├── chat
+│   │   │   └── ChatUI.tsx
+│   │   ├── common
+│   │   │   └── ErrorBoundary.tsx
+│   │   ├── components_tree.txt
+│   │   ├── course
+│   │   │   └── CourseCreation.tsx
+│   │   └── user
+│   │       ├── UserDashboard.tsx
+│   │       └── UserProfile.tsx
+│   ├── config
+│   │   └── env.ts
 │   ├── index.css
 │   ├── main.tsx
-│   ├── middleware
-│   │   ├── errorHandler.ts
-│   │   └── middleware_tree.txt
-│   ├── models
-│   │   ├── models_tree.txt
-│   │   └── userModel.ts
-│   ├── routes
-│   │   ├── routes_tree.txt
-│   │   └── userRoutes.ts
+│   ├── server
+│   │   ├── controllers
+│   │   │   ├── controllers_tree.txt
+│   │   │   └── userController.ts
+│   │   ├── middleware
+│   │   │   ├── errorHandler.ts
+│   │   │   └── middleware_tree.txt
+│   │   ├── models
+│   │   │   ├── models_tree.txt
+│   │   │   └── userModel.ts
+│   │   └── routes
+│   │       ├── routes_tree.txt
+│   │       └── userRoutes.ts
 │   ├── server.ts
 │   ├── src_tree.txt
 │   ├── store
 │   │   ├── store_tree.txt
 │   │   └── useStore.ts
 │   ├── types
+│   │   ├── course.ts
 │   │   ├── index.ts
 │   │   ├── types_tree.txt
 │   │   └── user.ts
@@ -33374,6 +33546,10 @@
 ├── tree.txt
 ├── tsconfig.json
 ├── tsconfig.node.json
-└── vite.config.ts
+├── vite.config.ts
+└── zbakup-server-json
+    ├── bingsearch.md
+    ├── postcss.config.ts
+    └── server.js
 
-3654 directories, 29723 files
+3704 directories, 29849 files

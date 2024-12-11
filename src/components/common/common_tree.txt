@@ -1,0 +1,5 @@
+/home/wicked/geauxedu/src//components//common/
+├── ErrorBoundary.tsx
+└── common_tree.txt
+
+1 directory, 2 files

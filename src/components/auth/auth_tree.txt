@@ -1,0 +1,6 @@
+/home/wicked/geauxedu/src//components//auth/
+├── Signin.tsx
+├── Signup.tsx
+└── auth_tree.txt
+
+1 directory, 3 files
