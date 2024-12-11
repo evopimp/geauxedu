@@ -1,6 +1,6 @@
 // src/api/chat.ts
 import express from 'express';
-import { OpenAIClient } from '@azure/openai';
+import { OpenAIClient, AzureKeyCredential } from '@azure/ai-openai';
 import { env } from '../config/env';
 
 const router = express.Router();

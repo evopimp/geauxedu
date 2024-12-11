@@ -3,9 +3,9 @@ import { useState, FormEvent } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
-import { createUser } from '../api/userApi';
-import { useStore } from '../store/useStore';
-import { User } from '../types';
+import { createUser } from '@/api/userApi';
+import { useStore } from '@/store/useStore';
+import { User } from '@/types';
 
 const Signup = () => {
   const { setUser } = useStore();

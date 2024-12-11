@@ -30,3 +30,7 @@ export interface APIResponse<T> {
   message?: string;
   status: number;
 }
+
+// src/types/index.ts
+export * from './user';
+export * from './course';
