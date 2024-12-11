@@ -3,9 +3,9 @@
 ├── eslint.config.js
 ├── generate_tree_files.sh
 ├── index.html
+├── mongodb-mongosh_2.1.1_amd64.deb
 ├── node_modules
 │   ├── @alloc
-│   │   ├── @alloc_tree.txt
 │   │   └── quick-lru
 │   │       ├── index.d.ts
 │   │       ├── index.js
@@ -14,7 +14,6 @@
 │   │       ├── quick-lru_tree.txt
 │   │       └── readme.md
 │   ├── @ampproject
-│   │   ├── @ampproject_tree.txt
 │   │   └── remapping
 │   │       ├── LICENSE
 │   │       ├── README.md
@@ -34,7 +33,6 @@
 │   │       ├── package.json
 │   │       └── remapping_tree.txt
 │   ├── @babel
-│   │   ├── @babel_tree.txt
 │   │   ├── code-frame
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -1041,14 +1039,13 @@
 │   │   │   │   ├── visitors.js
 │   │   │   │   └── visitors.js.map
 │   │   │   ├── node_modules
-│   │   │   │   ├── globals
-│   │   │   │   │   ├── globals.json
-│   │   │   │   │   ├── globals_tree.txt
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   ├── license
-│   │   │   │   │   ├── package.json
-│   │   │   │   │   └── readme.md
-│   │   │   │   └── node_modules_tree.txt
+│   │   │   │   └── globals
+│   │   │   │       ├── globals.json
+│   │   │   │       ├── globals_tree.txt
+│   │   │   │       ├── index.js
+│   │   │   │       ├── license
+│   │   │   │       ├── package.json
+│   │   │   │       └── readme.md
 │   │   │   ├── package.json
 │   │   │   ├── traverse_tree.txt
 │   │   │   ├── tsconfig.json
@@ -1286,7 +1283,6 @@
 │   │       ├── tsconfig.tsbuildinfo
 │   │       └── types_tree.txt
 │   ├── @esbuild
-│   │   ├── @esbuild_tree.txt
 │   │   └── linux-x64
 │   │       ├── README.md
 │   │       ├── bin
@@ -1295,7 +1291,6 @@
 │   │       ├── linux-x64_tree.txt
 │   │       └── package.json
 │   ├── @eslint
-│   │   ├── @eslint_tree.txt
 │   │   ├── config-array
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -1366,15 +1361,14 @@
 │   │   │   │       ├── shared_tree.txt
 │   │   │   │       └── types.js
 │   │   │   ├── node_modules
-│   │   │   │   ├── globals
-│   │   │   │   │   ├── globals.json
-│   │   │   │   │   ├── globals_tree.txt
-│   │   │   │   │   ├── index.d.ts
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   ├── license
-│   │   │   │   │   ├── package.json
-│   │   │   │   │   └── readme.md
-│   │   │   │   └── node_modules_tree.txt
+│   │   │   │   └── globals
+│   │   │   │       ├── globals.json
+│   │   │   │       ├── globals_tree.txt
+│   │   │   │       ├── index.d.ts
+│   │   │   │       ├── index.js
+│   │   │   │       ├── license
+│   │   │   │       ├── package.json
+│   │   │   │       └── readme.md
 │   │   │   ├── package.json
 │   │   │   └── universal.js
 │   │   ├── js
@@ -1426,7 +1420,6 @@
 │   │       ├── package.json
 │   │       └── plugin-kit_tree.txt
 │   ├── @eslint-community
-│   │   ├── @eslint-community_tree.txt
 │   │   ├── eslint-utils
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -1436,22 +1429,21 @@
 │   │   │   ├── index.mjs
 │   │   │   ├── index.mjs.map
 │   │   │   ├── node_modules
-│   │   │   │   ├── eslint-visitor-keys
-│   │   │   │   │   ├── LICENSE
-│   │   │   │   │   ├── README.md
-│   │   │   │   │   ├── dist
-│   │   │   │   │   │   ├── dist_tree.txt
-│   │   │   │   │   │   ├── eslint-visitor-keys.cjs
-│   │   │   │   │   │   ├── eslint-visitor-keys.d.cts
-│   │   │   │   │   │   ├── index.d.ts
-│   │   │   │   │   │   └── visitor-keys.d.ts
-│   │   │   │   │   ├── eslint-visitor-keys_tree.txt
-│   │   │   │   │   ├── lib
-│   │   │   │   │   │   ├── index.js
-│   │   │   │   │   │   ├── lib_tree.txt
-│   │   │   │   │   │   └── visitor-keys.js
-│   │   │   │   │   └── package.json
-│   │   │   │   └── node_modules_tree.txt
+│   │   │   │   └── eslint-visitor-keys
+│   │   │   │       ├── LICENSE
+│   │   │   │       ├── README.md
+│   │   │   │       ├── dist
+│   │   │   │       │   ├── dist_tree.txt
+│   │   │   │       │   ├── eslint-visitor-keys.cjs
+│   │   │   │       │   ├── eslint-visitor-keys.d.cts
+│   │   │   │       │   ├── index.d.ts
+│   │   │   │       │   └── visitor-keys.d.ts
+│   │   │   │       ├── eslint-visitor-keys_tree.txt
+│   │   │   │       ├── lib
+│   │   │   │       │   ├── index.js
+│   │   │   │       │   ├── lib_tree.txt
+│   │   │   │       │   └── visitor-keys.js
+│   │   │   │       └── package.json
 │   │   │   └── package.json
 │   │   └── regexpp
 │   │       ├── LICENSE
@@ -1464,7 +1456,6 @@
 │   │       ├── package.json
 │   │       └── regexpp_tree.txt
 │   ├── @floating-ui
-│   │   ├── @floating-ui_tree.txt
 │   │   ├── core
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -1534,7 +1525,6 @@
 │   │       ├── package.json
 │   │       └── utils_tree.txt
 │   ├── @humanfs
-│   │   ├── @humanfs_tree.txt
 │   │   ├── core
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -1568,7 +1558,6 @@
 │   │           ├── node-hfs.js
 │   │           └── src_tree.txt
 │   ├── @humanwhocodes
-│   │   ├── @humanwhocodes_tree.txt
 │   │   ├── module-importer
 │   │   │   ├── CHANGELOG.md
 │   │   │   ├── LICENSE
@@ -1599,7 +1588,6 @@
 │   │       ├── package.json
 │   │       └── retry_tree.txt
 │   ├── @isaacs
-│   │   ├── @isaacs_tree.txt
 │   │   └── cliui
 │   │       ├── LICENSE.txt
 │   │       ├── README.md
@@ -1614,7 +1602,6 @@
 │   │       ├── index.mjs
 │   │       └── package.json
 │   ├── @jridgewell
-│   │   ├── @jridgewell_tree.txt
 │   │   ├── gen-mapping
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -1699,7 +1686,6 @@
 │   │       ├── package.json
 │   │       └── trace-mapping_tree.txt
 │   ├── @mongodb-js
-│   │   ├── @mongodb-js_tree.txt
 │   │   └── saslprep
 │   │       ├── LICENSE
 │   │       ├── dist
@@ -1744,7 +1730,6 @@
 │   │       ├── readme.md
 │   │       └── saslprep_tree.txt
 │   ├── @nodelib
-│   │   ├── @nodelib_tree.txt
 │   │   ├── fs.scandir
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -1841,7 +1826,6 @@
 │   │       │       └── types_tree.txt
 │   │       └── package.json
 │   ├── @pkgjs
-│   │   ├── @pkgjs_tree.txt
 │   │   └── parseargs
 │   │       ├── CHANGELOG.md
 │   │       ├── LICENSE
@@ -1865,7 +1849,6 @@
 │   │       ├── parseargs_tree.txt
 │   │       └── utils.js
 │   ├── @radix-ui
-│   │   ├── @radix-ui_tree.txt
 │   │   ├── number
 │   │   │   ├── README.md
 │   │   │   ├── dist
@@ -1913,21 +1896,19 @@
 │   │   │   │   ├── index.mjs
 │   │   │   │   └── index.mjs.map
 │   │   │   ├── node_modules
-│   │   │   │   ├── @radix-ui
-│   │   │   │   │   ├── @radix-ui_tree.txt
-│   │   │   │   │   └── react-context
-│   │   │   │   │       ├── README.md
-│   │   │   │   │       ├── dist
-│   │   │   │   │       │   ├── dist_tree.txt
-│   │   │   │   │       │   ├── index.d.mts
-│   │   │   │   │       │   ├── index.d.ts
-│   │   │   │   │       │   ├── index.js
-│   │   │   │   │       │   ├── index.js.map
-│   │   │   │   │       │   ├── index.mjs
-│   │   │   │   │       │   └── index.mjs.map
-│   │   │   │   │       ├── package.json
-│   │   │   │   │       └── react-context_tree.txt
-│   │   │   │   └── node_modules_tree.txt
+│   │   │   │   └── @radix-ui
+│   │   │   │       └── react-context
+│   │   │   │           ├── README.md
+│   │   │   │           ├── dist
+│   │   │   │           │   ├── dist_tree.txt
+│   │   │   │           │   ├── index.d.mts
+│   │   │   │           │   ├── index.d.ts
+│   │   │   │           │   ├── index.js
+│   │   │   │           │   ├── index.js.map
+│   │   │   │           │   ├── index.mjs
+│   │   │   │           │   └── index.mjs.map
+│   │   │   │           ├── package.json
+│   │   │   │           └── react-context_tree.txt
 │   │   │   ├── package.json
 │   │   │   └── react-collection_tree.txt
 │   │   ├── react-compose-refs
@@ -2037,21 +2018,19 @@
 │   │   │   │   ├── index.mjs
 │   │   │   │   └── index.mjs.map
 │   │   │   ├── node_modules
-│   │   │   │   ├── @radix-ui
-│   │   │   │   │   ├── @radix-ui_tree.txt
-│   │   │   │   │   └── react-context
-│   │   │   │   │       ├── README.md
-│   │   │   │   │       ├── dist
-│   │   │   │   │       │   ├── dist_tree.txt
-│   │   │   │   │       │   ├── index.d.mts
-│   │   │   │   │       │   ├── index.d.ts
-│   │   │   │   │       │   ├── index.js
-│   │   │   │   │       │   ├── index.js.map
-│   │   │   │   │       │   ├── index.mjs
-│   │   │   │   │       │   └── index.mjs.map
-│   │   │   │   │       ├── package.json
-│   │   │   │   │       └── react-context_tree.txt
-│   │   │   │   └── node_modules_tree.txt
+│   │   │   │   └── @radix-ui
+│   │   │   │       └── react-context
+│   │   │   │           ├── README.md
+│   │   │   │           ├── dist
+│   │   │   │           │   ├── dist_tree.txt
+│   │   │   │           │   ├── index.d.mts
+│   │   │   │           │   ├── index.d.ts
+│   │   │   │           │   ├── index.js
+│   │   │   │           │   ├── index.js.map
+│   │   │   │           │   ├── index.mjs
+│   │   │   │           │   └── index.mjs.map
+│   │   │   │           ├── package.json
+│   │   │   │           └── react-context_tree.txt
 │   │   │   ├── package.json
 │   │   │   └── react-popper_tree.txt
 │   │   ├── react-portal
@@ -2101,21 +2080,19 @@
 │   │   │   │   ├── index.mjs
 │   │   │   │   └── index.mjs.map
 │   │   │   ├── node_modules
-│   │   │   │   ├── @radix-ui
-│   │   │   │   │   ├── @radix-ui_tree.txt
-│   │   │   │   │   └── react-context
-│   │   │   │   │       ├── README.md
-│   │   │   │   │       ├── dist
-│   │   │   │   │       │   ├── dist_tree.txt
-│   │   │   │   │       │   ├── index.d.mts
-│   │   │   │   │       │   ├── index.d.ts
-│   │   │   │   │       │   ├── index.js
-│   │   │   │   │       │   ├── index.js.map
-│   │   │   │   │       │   ├── index.mjs
-│   │   │   │   │       │   └── index.mjs.map
-│   │   │   │   │       ├── package.json
-│   │   │   │   │       └── react-context_tree.txt
-│   │   │   │   └── node_modules_tree.txt
+│   │   │   │   └── @radix-ui
+│   │   │   │       └── react-context
+│   │   │   │           ├── README.md
+│   │   │   │           ├── dist
+│   │   │   │           │   ├── dist_tree.txt
+│   │   │   │           │   ├── index.d.mts
+│   │   │   │           │   ├── index.d.ts
+│   │   │   │           │   ├── index.js
+│   │   │   │           │   ├── index.js.map
+│   │   │   │           │   ├── index.mjs
+│   │   │   │           │   └── index.mjs.map
+│   │   │   │           ├── package.json
+│   │   │   │           └── react-context_tree.txt
 │   │   │   ├── package.json
 │   │   │   └── react-roving-focus_tree.txt
 │   │   ├── react-select
@@ -2263,7 +2240,6 @@
 │   │       ├── package.json
 │   │       └── rect_tree.txt
 │   ├── @remix-run
-│   │   ├── @remix-run_tree.txt
 │   │   └── router
 │   │       ├── CHANGELOG.md
 │   │       ├── LICENSE.md
@@ -2289,7 +2265,6 @@
 │   │       ├── router_tree.txt
 │   │       └── utils.ts
 │   ├── @rollup
-│   │   ├── @rollup_tree.txt
 │   │   ├── rollup-linux-x64-gnu
 │   │   │   ├── README.md
 │   │   │   ├── package.json
@@ -2301,7 +2276,6 @@
 │   │       ├── rollup-linux-x64-musl_tree.txt
 │   │       └── rollup.linux-x64-musl.node
 │   ├── @types
-│   │   ├── @types_tree.txt
 │   │   ├── babel__core
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -2324,6 +2298,11 @@
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
 │   │   │   ├── babel__traverse_tree.txt
+│   │   │   ├── index.d.ts
+│   │   │   └── package.json
+│   │   ├── bcryptjs
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
 │   │   │   ├── index.d.ts
 │   │   │   └── package.json
 │   │   ├── d3-array
@@ -2398,6 +2377,11 @@
 │   │   │   ├── README.md
 │   │   │   ├── index.d.ts
 │   │   │   ├── json-schema_tree.txt
+│   │   │   └── package.json
+│   │   ├── jsonwebtoken
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── index.d.ts
 │   │   │   └── package.json
 │   │   ├── node
 │   │   │   ├── LICENSE
@@ -2547,7 +2531,6 @@
 │   │       ├── webidl2js-wrapper.d.ts
 │   │       └── whatwg-url_tree.txt
 │   ├── @vitejs
-│   │   ├── @vitejs_tree.txt
 │   │   └── plugin-react
 │   │       ├── LICENSE
 │   │       ├── README.md
@@ -3112,13 +3095,12 @@
 │   │   │   │       ├── inspector-log.js
 │   │   │   │       ├── node.js
 │   │   │   │       └── src_tree.txt
-│   │   │   ├── ms
-│   │   │   │   ├── index.js
-│   │   │   │   ├── license.md
-│   │   │   │   ├── ms_tree.txt
-│   │   │   │   ├── package.json
-│   │   │   │   └── readme.md
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── ms
+│   │   │       ├── index.js
+│   │   │       ├── license.md
+│   │   │       ├── ms_tree.txt
+│   │   │       ├── package.json
+│   │   │       └── readme.md
 │   │   └── package.json
 │   ├── brace-expansion
 │   │   ├── LICENSE
@@ -3230,6 +3212,12 @@
 │   │       │   ├── package.json
 │   │       │   └── text-encoding_tree.txt
 │   │       └── vendor_tree.txt
+│   ├── buffer-equal-constant-time
+│   │   ├── LICENSE.txt
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   ├── package.json
+│   │   └── test.js
 │   ├── bytes
 │   │   ├── History.md
 │   │   ├── LICENSE
@@ -4157,14 +4145,13 @@
 │   │   │   ├── lib_tree.txt
 │   │   │   └── nodefs-handler.js
 │   │   ├── node_modules
-│   │   │   ├── glob-parent
-│   │   │   │   ├── CHANGELOG.md
-│   │   │   │   ├── LICENSE
-│   │   │   │   ├── README.md
-│   │   │   │   ├── glob-parent_tree.txt
-│   │   │   │   ├── index.js
-│   │   │   │   └── package.json
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── glob-parent
+│   │   │       ├── CHANGELOG.md
+│   │   │       ├── LICENSE
+│   │   │       ├── README.md
+│   │   │       ├── glob-parent_tree.txt
+│   │   │       ├── index.js
+│   │   │       └── package.json
 │   │   ├── package.json
 │   │   └── types
 │   │       ├── index.d.ts
@@ -5328,6 +5315,15 @@
 │   │   ├── eastasianwidth.js
 │   │   ├── eastasianwidth_tree.txt
 │   │   └── package.json
+│   ├── ecdsa-sig-formatter
+│   │   ├── CODEOWNERS
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── package.json
+│   │   └── src
+│   │       ├── ecdsa-sig-formatter.d.ts
+│   │       ├── ecdsa-sig-formatter.js
+│   │       └── param-bytes-for-alg.js
 │   ├── ee-first
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -5964,7 +5960,6 @@
 │   │   │   │   ├── license
 │   │   │   │   ├── package.json
 │   │   │   │   └── readme.md
-│   │   │   ├── node_modules_tree.txt
 │   │   │   └── supports-color
 │   │   │       ├── browser.js
 │   │   │       ├── index.js
@@ -6155,13 +6150,12 @@
 │   │   │   │       ├── inspector-log.js
 │   │   │   │       ├── node.js
 │   │   │   │       └── src_tree.txt
-│   │   │   ├── ms
-│   │   │   │   ├── index.js
-│   │   │   │   ├── license.md
-│   │   │   │   ├── ms_tree.txt
-│   │   │   │   ├── package.json
-│   │   │   │   └── readme.md
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── ms
+│   │   │       ├── index.js
+│   │   │       ├── license.md
+│   │   │       ├── ms_tree.txt
+│   │   │       ├── package.json
+│   │   │       └── readme.md
 │   │   └── package.json
 │   ├── fast-deep-equal
 │   │   ├── LICENSE
@@ -6268,14 +6262,13 @@
 │   │   ├── README.md
 │   │   ├── fast-glob_tree.txt
 │   │   ├── node_modules
-│   │   │   ├── glob-parent
-│   │   │   │   ├── CHANGELOG.md
-│   │   │   │   ├── LICENSE
-│   │   │   │   ├── README.md
-│   │   │   │   ├── glob-parent_tree.txt
-│   │   │   │   ├── index.js
-│   │   │   │   └── package.json
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── glob-parent
+│   │   │       ├── CHANGELOG.md
+│   │   │       ├── LICENSE
+│   │   │       ├── README.md
+│   │   │       ├── glob-parent_tree.txt
+│   │   │       ├── index.js
+│   │   │       └── package.json
 │   │   ├── out
 │   │   │   ├── index.d.ts
 │   │   │   ├── index.js
@@ -6429,13 +6422,12 @@
 │   │   │   │       ├── inspector-log.js
 │   │   │   │       ├── node.js
 │   │   │   │       └── src_tree.txt
-│   │   │   ├── ms
-│   │   │   │   ├── index.js
-│   │   │   │   ├── license.md
-│   │   │   │   ├── ms_tree.txt
-│   │   │   │   ├── package.json
-│   │   │   │   └── readme.md
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── ms
+│   │   │       ├── index.js
+│   │   │       ├── license.md
+│   │   │       ├── ms_tree.txt
+│   │   │       ├── package.json
+│   │   │       └── readme.md
 │   │   └── package.json
 │   ├── find-up
 │   │   ├── find-up_tree.txt
@@ -7374,68 +7366,67 @@
 │   │   │   │   ├── brace-expansion_tree.txt
 │   │   │   │   ├── index.js
 │   │   │   │   └── package.json
-│   │   │   ├── minimatch
-│   │   │   │   ├── LICENSE
-│   │   │   │   ├── README.md
-│   │   │   │   ├── dist
-│   │   │   │   │   ├── commonjs
-│   │   │   │   │   │   ├── assert-valid-pattern.d.ts
-│   │   │   │   │   │   ├── assert-valid-pattern.d.ts.map
-│   │   │   │   │   │   ├── assert-valid-pattern.js
-│   │   │   │   │   │   ├── assert-valid-pattern.js.map
-│   │   │   │   │   │   ├── ast.d.ts
-│   │   │   │   │   │   ├── ast.d.ts.map
-│   │   │   │   │   │   ├── ast.js
-│   │   │   │   │   │   ├── ast.js.map
-│   │   │   │   │   │   ├── brace-expressions.d.ts
-│   │   │   │   │   │   ├── brace-expressions.d.ts.map
-│   │   │   │   │   │   ├── brace-expressions.js
-│   │   │   │   │   │   ├── brace-expressions.js.map
-│   │   │   │   │   │   ├── commonjs_tree.txt
-│   │   │   │   │   │   ├── escape.d.ts
-│   │   │   │   │   │   ├── escape.d.ts.map
-│   │   │   │   │   │   ├── escape.js
-│   │   │   │   │   │   ├── escape.js.map
-│   │   │   │   │   │   ├── index.d.ts
-│   │   │   │   │   │   ├── index.d.ts.map
-│   │   │   │   │   │   ├── index.js
-│   │   │   │   │   │   ├── index.js.map
-│   │   │   │   │   │   ├── package.json
-│   │   │   │   │   │   ├── unescape.d.ts
-│   │   │   │   │   │   ├── unescape.d.ts.map
-│   │   │   │   │   │   ├── unescape.js
-│   │   │   │   │   │   └── unescape.js.map
-│   │   │   │   │   ├── dist_tree.txt
-│   │   │   │   │   └── esm
-│   │   │   │   │       ├── assert-valid-pattern.d.ts
-│   │   │   │   │       ├── assert-valid-pattern.d.ts.map
-│   │   │   │   │       ├── assert-valid-pattern.js
-│   │   │   │   │       ├── assert-valid-pattern.js.map
-│   │   │   │   │       ├── ast.d.ts
-│   │   │   │   │       ├── ast.d.ts.map
-│   │   │   │   │       ├── ast.js
-│   │   │   │   │       ├── ast.js.map
-│   │   │   │   │       ├── brace-expressions.d.ts
-│   │   │   │   │       ├── brace-expressions.d.ts.map
-│   │   │   │   │       ├── brace-expressions.js
-│   │   │   │   │       ├── brace-expressions.js.map
-│   │   │   │   │       ├── escape.d.ts
-│   │   │   │   │       ├── escape.d.ts.map
-│   │   │   │   │       ├── escape.js
-│   │   │   │   │       ├── escape.js.map
-│   │   │   │   │       ├── esm_tree.txt
-│   │   │   │   │       ├── index.d.ts
-│   │   │   │   │       ├── index.d.ts.map
-│   │   │   │   │       ├── index.js
-│   │   │   │   │       ├── index.js.map
-│   │   │   │   │       ├── package.json
-│   │   │   │   │       ├── unescape.d.ts
-│   │   │   │   │       ├── unescape.d.ts.map
-│   │   │   │   │       ├── unescape.js
-│   │   │   │   │       └── unescape.js.map
-│   │   │   │   ├── minimatch_tree.txt
-│   │   │   │   └── package.json
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── minimatch
+│   │   │       ├── LICENSE
+│   │   │       ├── README.md
+│   │   │       ├── dist
+│   │   │       │   ├── commonjs
+│   │   │       │   │   ├── assert-valid-pattern.d.ts
+│   │   │       │   │   ├── assert-valid-pattern.d.ts.map
+│   │   │       │   │   ├── assert-valid-pattern.js
+│   │   │       │   │   ├── assert-valid-pattern.js.map
+│   │   │       │   │   ├── ast.d.ts
+│   │   │       │   │   ├── ast.d.ts.map
+│   │   │       │   │   ├── ast.js
+│   │   │       │   │   ├── ast.js.map
+│   │   │       │   │   ├── brace-expressions.d.ts
+│   │   │       │   │   ├── brace-expressions.d.ts.map
+│   │   │       │   │   ├── brace-expressions.js
+│   │   │       │   │   ├── brace-expressions.js.map
+│   │   │       │   │   ├── commonjs_tree.txt
+│   │   │       │   │   ├── escape.d.ts
+│   │   │       │   │   ├── escape.d.ts.map
+│   │   │       │   │   ├── escape.js
+│   │   │       │   │   ├── escape.js.map
+│   │   │       │   │   ├── index.d.ts
+│   │   │       │   │   ├── index.d.ts.map
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   ├── index.js.map
+│   │   │       │   │   ├── package.json
+│   │   │       │   │   ├── unescape.d.ts
+│   │   │       │   │   ├── unescape.d.ts.map
+│   │   │       │   │   ├── unescape.js
+│   │   │       │   │   └── unescape.js.map
+│   │   │       │   ├── dist_tree.txt
+│   │   │       │   └── esm
+│   │   │       │       ├── assert-valid-pattern.d.ts
+│   │   │       │       ├── assert-valid-pattern.d.ts.map
+│   │   │       │       ├── assert-valid-pattern.js
+│   │   │       │       ├── assert-valid-pattern.js.map
+│   │   │       │       ├── ast.d.ts
+│   │   │       │       ├── ast.d.ts.map
+│   │   │       │       ├── ast.js
+│   │   │       │       ├── ast.js.map
+│   │   │       │       ├── brace-expressions.d.ts
+│   │   │       │       ├── brace-expressions.d.ts.map
+│   │   │       │       ├── brace-expressions.js
+│   │   │       │       ├── brace-expressions.js.map
+│   │   │       │       ├── escape.d.ts
+│   │   │       │       ├── escape.d.ts.map
+│   │   │       │       ├── escape.js
+│   │   │       │       ├── escape.js.map
+│   │   │       │       ├── esm_tree.txt
+│   │   │       │       ├── index.d.ts
+│   │   │       │       ├── index.d.ts.map
+│   │   │       │       ├── index.js
+│   │   │       │       ├── index.js.map
+│   │   │       │       ├── package.json
+│   │   │       │       ├── unescape.d.ts
+│   │   │       │       ├── unescape.d.ts.map
+│   │   │       │       ├── unescape.js
+│   │   │       │       └── unescape.js.map
+│   │   │       ├── minimatch_tree.txt
+│   │   │       └── package.json
 │   │   └── package.json
 │   ├── glob-parent
 │   │   ├── LICENSE
@@ -7520,7 +7511,6 @@
 │   │   │   └── hoist-non-react-statics.min.js
 │   │   ├── hoist-non-react-statics_tree.txt
 │   │   ├── node_modules
-│   │   │   ├── node_modules_tree.txt
 │   │   │   └── react-is
 │   │   │       ├── LICENSE
 │   │   │       ├── README.md
@@ -7885,6 +7875,98 @@
 │   │   │   ├── util.d.ts
 │   │   │   └── util.js
 │   │   └── package.json
+│   ├── jsonwebtoken
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── decode.js
+│   │   ├── index.js
+│   │   ├── lib
+│   │   │   ├── JsonWebTokenError.js
+│   │   │   ├── NotBeforeError.js
+│   │   │   ├── TokenExpiredError.js
+│   │   │   ├── asymmetricKeyDetailsSupported.js
+│   │   │   ├── psSupported.js
+│   │   │   ├── rsaPssKeyDetailsSupported.js
+│   │   │   ├── timespan.js
+│   │   │   └── validateAsymmetricKey.js
+│   │   ├── node_modules
+│   │   │   └── semver
+│   │   │       ├── LICENSE
+│   │   │       ├── README.md
+│   │   │       ├── bin
+│   │   │       │   └── semver.js
+│   │   │       ├── classes
+│   │   │       │   ├── comparator.js
+│   │   │       │   ├── index.js
+│   │   │       │   ├── range.js
+│   │   │       │   └── semver.js
+│   │   │       ├── functions
+│   │   │       │   ├── clean.js
+│   │   │       │   ├── cmp.js
+│   │   │       │   ├── coerce.js
+│   │   │       │   ├── compare-build.js
+│   │   │       │   ├── compare-loose.js
+│   │   │       │   ├── compare.js
+│   │   │       │   ├── diff.js
+│   │   │       │   ├── eq.js
+│   │   │       │   ├── gt.js
+│   │   │       │   ├── gte.js
+│   │   │       │   ├── inc.js
+│   │   │       │   ├── lt.js
+│   │   │       │   ├── lte.js
+│   │   │       │   ├── major.js
+│   │   │       │   ├── minor.js
+│   │   │       │   ├── neq.js
+│   │   │       │   ├── parse.js
+│   │   │       │   ├── patch.js
+│   │   │       │   ├── prerelease.js
+│   │   │       │   ├── rcompare.js
+│   │   │       │   ├── rsort.js
+│   │   │       │   ├── satisfies.js
+│   │   │       │   ├── sort.js
+│   │   │       │   └── valid.js
+│   │   │       ├── index.js
+│   │   │       ├── internal
+│   │   │       │   ├── constants.js
+│   │   │       │   ├── debug.js
+│   │   │       │   ├── identifiers.js
+│   │   │       │   ├── lrucache.js
+│   │   │       │   ├── parse-options.js
+│   │   │       │   └── re.js
+│   │   │       ├── package.json
+│   │   │       ├── preload.js
+│   │   │       ├── range.bnf
+│   │   │       └── ranges
+│   │   │           ├── gtr.js
+│   │   │           ├── intersects.js
+│   │   │           ├── ltr.js
+│   │   │           ├── max-satisfying.js
+│   │   │           ├── min-satisfying.js
+│   │   │           ├── min-version.js
+│   │   │           ├── outside.js
+│   │   │           ├── simplify.js
+│   │   │           ├── subset.js
+│   │   │           ├── to-comparators.js
+│   │   │           └── valid.js
+│   │   ├── package.json
+│   │   ├── sign.js
+│   │   └── verify.js
+│   ├── jwa
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
+│   ├── jws
+│   │   ├── CHANGELOG.md
+│   │   ├── LICENSE
+│   │   ├── index.js
+│   │   ├── lib
+│   │   │   ├── data-stream.js
+│   │   │   ├── sign-stream.js
+│   │   │   ├── tostring.js
+│   │   │   └── verify-stream.js
+│   │   ├── package.json
+│   │   └── readme.md
 │   ├── kareem
 │   │   ├── CHANGELOG.md
 │   │   ├── LICENSE
@@ -9647,11 +9729,46 @@
 │   │   ├── zipObject.js
 │   │   ├── zipObjectDeep.js
 │   │   └── zipWith.js
+│   ├── lodash.includes
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
+│   ├── lodash.isboolean
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
+│   ├── lodash.isinteger
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
+│   ├── lodash.isnumber
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
+│   ├── lodash.isplainobject
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
+│   ├── lodash.isstring
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
+│   │   └── package.json
 │   ├── lodash.merge
 │   │   ├── LICENSE
 │   │   ├── README.md
 │   │   ├── index.js
 │   │   ├── lodash.merge_tree.txt
+│   │   └── package.json
+│   ├── lodash.once
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── index.js
 │   │   └── package.json
 │   ├── loose-envify
 │   │   ├── LICENSE
@@ -13322,7 +13439,6 @@
 │   │   │   └── redact.js.map
 │   │   ├── mongodb-connection-string-url_tree.txt
 │   │   ├── node_modules
-│   │   │   ├── node_modules_tree.txt
 │   │   │   ├── tr46
 │   │   │   │   ├── LICENSE.md
 │   │   │   │   ├── README.md
@@ -13698,484 +13814,483 @@
 │   │   │   └── virtualType.js
 │   │   ├── mongoose_tree.txt
 │   │   ├── node_modules
-│   │   │   ├── mongodb
-│   │   │   │   ├── LICENSE.md
-│   │   │   │   ├── README.md
-│   │   │   │   ├── etc
-│   │   │   │   │   ├── etc_tree.txt
-│   │   │   │   │   └── prepare.js
-│   │   │   │   ├── lib
-│   │   │   │   │   ├── admin.js
-│   │   │   │   │   ├── admin.js.map
-│   │   │   │   │   ├── beta.d.ts
-│   │   │   │   │   ├── beta.js
-│   │   │   │   │   ├── beta.js.map
-│   │   │   │   │   ├── bson.js
-│   │   │   │   │   ├── bson.js.map
-│   │   │   │   │   ├── bulk
-│   │   │   │   │   │   ├── bulk_tree.txt
-│   │   │   │   │   │   ├── common.js
-│   │   │   │   │   │   ├── common.js.map
-│   │   │   │   │   │   ├── ordered.js
-│   │   │   │   │   │   ├── ordered.js.map
-│   │   │   │   │   │   ├── unordered.js
-│   │   │   │   │   │   └── unordered.js.map
-│   │   │   │   │   ├── change_stream.js
-│   │   │   │   │   ├── change_stream.js.map
-│   │   │   │   │   ├── client-side-encryption
-│   │   │   │   │   │   ├── auto_encrypter.js
-│   │   │   │   │   │   ├── auto_encrypter.js.map
-│   │   │   │   │   │   ├── client-side-encryption_tree.txt
-│   │   │   │   │   │   ├── client_encryption.js
-│   │   │   │   │   │   ├── client_encryption.js.map
-│   │   │   │   │   │   ├── crypto_callbacks.js
-│   │   │   │   │   │   ├── crypto_callbacks.js.map
-│   │   │   │   │   │   ├── errors.js
-│   │   │   │   │   │   ├── errors.js.map
-│   │   │   │   │   │   ├── mongocryptd_manager.js
-│   │   │   │   │   │   ├── mongocryptd_manager.js.map
-│   │   │   │   │   │   ├── providers
-│   │   │   │   │   │   │   ├── aws.js
-│   │   │   │   │   │   │   ├── aws.js.map
-│   │   │   │   │   │   │   ├── azure.js
-│   │   │   │   │   │   │   ├── azure.js.map
-│   │   │   │   │   │   │   ├── gcp.js
-│   │   │   │   │   │   │   ├── gcp.js.map
-│   │   │   │   │   │   │   ├── index.js
-│   │   │   │   │   │   │   ├── index.js.map
-│   │   │   │   │   │   │   └── providers_tree.txt
-│   │   │   │   │   │   ├── state_machine.js
-│   │   │   │   │   │   └── state_machine.js.map
-│   │   │   │   │   ├── cmap
-│   │   │   │   │   │   ├── auth
-│   │   │   │   │   │   │   ├── auth_provider.js
-│   │   │   │   │   │   │   ├── auth_provider.js.map
-│   │   │   │   │   │   │   ├── auth_tree.txt
-│   │   │   │   │   │   │   ├── aws_temporary_credentials.js
-│   │   │   │   │   │   │   ├── aws_temporary_credentials.js.map
-│   │   │   │   │   │   │   ├── gssapi.js
-│   │   │   │   │   │   │   ├── gssapi.js.map
-│   │   │   │   │   │   │   ├── mongo_credentials.js
-│   │   │   │   │   │   │   ├── mongo_credentials.js.map
-│   │   │   │   │   │   │   ├── mongodb_aws.js
-│   │   │   │   │   │   │   ├── mongodb_aws.js.map
-│   │   │   │   │   │   │   ├── mongodb_oidc
-│   │   │   │   │   │   │   │   ├── automated_callback_workflow.js
-│   │   │   │   │   │   │   │   ├── automated_callback_workflow.js.map
-│   │   │   │   │   │   │   │   ├── azure_machine_workflow.js
-│   │   │   │   │   │   │   │   ├── azure_machine_workflow.js.map
-│   │   │   │   │   │   │   │   ├── callback_workflow.js
-│   │   │   │   │   │   │   │   ├── callback_workflow.js.map
-│   │   │   │   │   │   │   │   ├── command_builders.js
-│   │   │   │   │   │   │   │   ├── command_builders.js.map
-│   │   │   │   │   │   │   │   ├── gcp_machine_workflow.js
-│   │   │   │   │   │   │   │   ├── gcp_machine_workflow.js.map
-│   │   │   │   │   │   │   │   ├── human_callback_workflow.js
-│   │   │   │   │   │   │   │   ├── human_callback_workflow.js.map
-│   │   │   │   │   │   │   │   ├── machine_workflow.js
-│   │   │   │   │   │   │   │   ├── machine_workflow.js.map
-│   │   │   │   │   │   │   │   ├── mongodb_oidc_tree.txt
-│   │   │   │   │   │   │   │   ├── token_cache.js
-│   │   │   │   │   │   │   │   ├── token_cache.js.map
-│   │   │   │   │   │   │   │   ├── token_machine_workflow.js
-│   │   │   │   │   │   │   │   └── token_machine_workflow.js.map
-│   │   │   │   │   │   │   ├── mongodb_oidc.js
-│   │   │   │   │   │   │   ├── mongodb_oidc.js.map
-│   │   │   │   │   │   │   ├── plain.js
-│   │   │   │   │   │   │   ├── plain.js.map
-│   │   │   │   │   │   │   ├── providers.js
-│   │   │   │   │   │   │   ├── providers.js.map
-│   │   │   │   │   │   │   ├── scram.js
-│   │   │   │   │   │   │   ├── scram.js.map
-│   │   │   │   │   │   │   ├── x509.js
-│   │   │   │   │   │   │   └── x509.js.map
-│   │   │   │   │   │   ├── cmap_tree.txt
-│   │   │   │   │   │   ├── command_monitoring_events.js
-│   │   │   │   │   │   ├── command_monitoring_events.js.map
-│   │   │   │   │   │   ├── commands.js
-│   │   │   │   │   │   ├── commands.js.map
-│   │   │   │   │   │   ├── connect.js
-│   │   │   │   │   │   ├── connect.js.map
-│   │   │   │   │   │   ├── connection.js
-│   │   │   │   │   │   ├── connection.js.map
-│   │   │   │   │   │   ├── connection_pool.js
-│   │   │   │   │   │   ├── connection_pool.js.map
-│   │   │   │   │   │   ├── connection_pool_events.js
-│   │   │   │   │   │   ├── connection_pool_events.js.map
-│   │   │   │   │   │   ├── errors.js
-│   │   │   │   │   │   ├── errors.js.map
-│   │   │   │   │   │   ├── handshake
-│   │   │   │   │   │   │   ├── client_metadata.js
-│   │   │   │   │   │   │   ├── client_metadata.js.map
-│   │   │   │   │   │   │   └── handshake_tree.txt
-│   │   │   │   │   │   ├── metrics.js
-│   │   │   │   │   │   ├── metrics.js.map
-│   │   │   │   │   │   ├── stream_description.js
-│   │   │   │   │   │   ├── stream_description.js.map
-│   │   │   │   │   │   └── wire_protocol
-│   │   │   │   │   │       ├── compression.js
-│   │   │   │   │   │       ├── compression.js.map
-│   │   │   │   │   │       ├── constants.js
-│   │   │   │   │   │       ├── constants.js.map
-│   │   │   │   │   │       ├── on_data.js
-│   │   │   │   │   │       ├── on_data.js.map
-│   │   │   │   │   │       ├── on_demand
-│   │   │   │   │   │       │   ├── document.js
-│   │   │   │   │   │       │   ├── document.js.map
-│   │   │   │   │   │       │   └── on_demand_tree.txt
-│   │   │   │   │   │       ├── responses.js
-│   │   │   │   │   │       ├── responses.js.map
-│   │   │   │   │   │       ├── shared.js
-│   │   │   │   │   │       ├── shared.js.map
-│   │   │   │   │   │       └── wire_protocol_tree.txt
-│   │   │   │   │   ├── collection.js
-│   │   │   │   │   ├── collection.js.map
-│   │   │   │   │   ├── connection_string.js
-│   │   │   │   │   ├── connection_string.js.map
-│   │   │   │   │   ├── constants.js
-│   │   │   │   │   ├── constants.js.map
-│   │   │   │   │   ├── cursor
-│   │   │   │   │   │   ├── abstract_cursor.js
-│   │   │   │   │   │   ├── abstract_cursor.js.map
-│   │   │   │   │   │   ├── aggregation_cursor.js
-│   │   │   │   │   │   ├── aggregation_cursor.js.map
-│   │   │   │   │   │   ├── change_stream_cursor.js
-│   │   │   │   │   │   ├── change_stream_cursor.js.map
-│   │   │   │   │   │   ├── client_bulk_write_cursor.js
-│   │   │   │   │   │   ├── client_bulk_write_cursor.js.map
-│   │   │   │   │   │   ├── cursor_tree.txt
-│   │   │   │   │   │   ├── find_cursor.js
-│   │   │   │   │   │   ├── find_cursor.js.map
-│   │   │   │   │   │   ├── list_collections_cursor.js
-│   │   │   │   │   │   ├── list_collections_cursor.js.map
-│   │   │   │   │   │   ├── list_indexes_cursor.js
-│   │   │   │   │   │   ├── list_indexes_cursor.js.map
-│   │   │   │   │   │   ├── list_search_indexes_cursor.js
-│   │   │   │   │   │   ├── list_search_indexes_cursor.js.map
-│   │   │   │   │   │   ├── run_command_cursor.js
-│   │   │   │   │   │   └── run_command_cursor.js.map
-│   │   │   │   │   ├── db.js
-│   │   │   │   │   ├── db.js.map
-│   │   │   │   │   ├── deps.js
-│   │   │   │   │   ├── deps.js.map
-│   │   │   │   │   ├── encrypter.js
-│   │   │   │   │   ├── encrypter.js.map
-│   │   │   │   │   ├── error.js
-│   │   │   │   │   ├── error.js.map
-│   │   │   │   │   ├── explain.js
-│   │   │   │   │   ├── explain.js.map
-│   │   │   │   │   ├── gridfs
-│   │   │   │   │   │   ├── download.js
-│   │   │   │   │   │   ├── download.js.map
-│   │   │   │   │   │   ├── gridfs_tree.txt
-│   │   │   │   │   │   ├── index.js
-│   │   │   │   │   │   ├── index.js.map
-│   │   │   │   │   │   ├── upload.js
-│   │   │   │   │   │   └── upload.js.map
-│   │   │   │   │   ├── index.js
-│   │   │   │   │   ├── index.js.map
-│   │   │   │   │   ├── lib_tree.txt
-│   │   │   │   │   ├── mongo_client.js
-│   │   │   │   │   ├── mongo_client.js.map
-│   │   │   │   │   ├── mongo_client_auth_providers.js
-│   │   │   │   │   ├── mongo_client_auth_providers.js.map
-│   │   │   │   │   ├── mongo_logger.js
-│   │   │   │   │   ├── mongo_logger.js.map
-│   │   │   │   │   ├── mongo_types.js
-│   │   │   │   │   ├── mongo_types.js.map
-│   │   │   │   │   ├── operations
-│   │   │   │   │   │   ├── aggregate.js
-│   │   │   │   │   │   ├── aggregate.js.map
-│   │   │   │   │   │   ├── bulk_write.js
-│   │   │   │   │   │   ├── bulk_write.js.map
-│   │   │   │   │   │   ├── client_bulk_write
-│   │   │   │   │   │   │   ├── client_bulk_write.js
-│   │   │   │   │   │   │   ├── client_bulk_write.js.map
-│   │   │   │   │   │   │   ├── client_bulk_write_tree.txt
-│   │   │   │   │   │   │   ├── command_builder.js
-│   │   │   │   │   │   │   ├── command_builder.js.map
-│   │   │   │   │   │   │   ├── common.js
-│   │   │   │   │   │   │   ├── common.js.map
-│   │   │   │   │   │   │   ├── executor.js
-│   │   │   │   │   │   │   ├── executor.js.map
-│   │   │   │   │   │   │   ├── results_merger.js
-│   │   │   │   │   │   │   └── results_merger.js.map
-│   │   │   │   │   │   ├── collections.js
-│   │   │   │   │   │   ├── collections.js.map
-│   │   │   │   │   │   ├── command.js
-│   │   │   │   │   │   ├── command.js.map
-│   │   │   │   │   │   ├── count.js
-│   │   │   │   │   │   ├── count.js.map
-│   │   │   │   │   │   ├── create_collection.js
-│   │   │   │   │   │   ├── create_collection.js.map
-│   │   │   │   │   │   ├── delete.js
-│   │   │   │   │   │   ├── delete.js.map
-│   │   │   │   │   │   ├── distinct.js
-│   │   │   │   │   │   ├── distinct.js.map
-│   │   │   │   │   │   ├── drop.js
-│   │   │   │   │   │   ├── drop.js.map
-│   │   │   │   │   │   ├── estimated_document_count.js
-│   │   │   │   │   │   ├── estimated_document_count.js.map
-│   │   │   │   │   │   ├── execute_operation.js
-│   │   │   │   │   │   ├── execute_operation.js.map
-│   │   │   │   │   │   ├── find.js
-│   │   │   │   │   │   ├── find.js.map
-│   │   │   │   │   │   ├── find_and_modify.js
-│   │   │   │   │   │   ├── find_and_modify.js.map
-│   │   │   │   │   │   ├── get_more.js
-│   │   │   │   │   │   ├── get_more.js.map
-│   │   │   │   │   │   ├── indexes.js
-│   │   │   │   │   │   ├── indexes.js.map
-│   │   │   │   │   │   ├── insert.js
-│   │   │   │   │   │   ├── insert.js.map
-│   │   │   │   │   │   ├── is_capped.js
-│   │   │   │   │   │   ├── is_capped.js.map
-│   │   │   │   │   │   ├── kill_cursors.js
-│   │   │   │   │   │   ├── kill_cursors.js.map
-│   │   │   │   │   │   ├── list_collections.js
-│   │   │   │   │   │   ├── list_collections.js.map
-│   │   │   │   │   │   ├── list_databases.js
-│   │   │   │   │   │   ├── list_databases.js.map
-│   │   │   │   │   │   ├── operation.js
-│   │   │   │   │   │   ├── operation.js.map
-│   │   │   │   │   │   ├── operations_tree.txt
-│   │   │   │   │   │   ├── options_operation.js
-│   │   │   │   │   │   ├── options_operation.js.map
-│   │   │   │   │   │   ├── profiling_level.js
-│   │   │   │   │   │   ├── profiling_level.js.map
-│   │   │   │   │   │   ├── remove_user.js
-│   │   │   │   │   │   ├── remove_user.js.map
-│   │   │   │   │   │   ├── rename.js
-│   │   │   │   │   │   ├── rename.js.map
-│   │   │   │   │   │   ├── run_command.js
-│   │   │   │   │   │   ├── run_command.js.map
-│   │   │   │   │   │   ├── search_indexes
-│   │   │   │   │   │   │   ├── create.js
-│   │   │   │   │   │   │   ├── create.js.map
-│   │   │   │   │   │   │   ├── drop.js
-│   │   │   │   │   │   │   ├── drop.js.map
-│   │   │   │   │   │   │   ├── search_indexes_tree.txt
-│   │   │   │   │   │   │   ├── update.js
-│   │   │   │   │   │   │   └── update.js.map
-│   │   │   │   │   │   ├── set_profiling_level.js
-│   │   │   │   │   │   ├── set_profiling_level.js.map
-│   │   │   │   │   │   ├── stats.js
-│   │   │   │   │   │   ├── stats.js.map
-│   │   │   │   │   │   ├── update.js
-│   │   │   │   │   │   ├── update.js.map
-│   │   │   │   │   │   ├── validate_collection.js
-│   │   │   │   │   │   └── validate_collection.js.map
-│   │   │   │   │   ├── read_concern.js
-│   │   │   │   │   ├── read_concern.js.map
-│   │   │   │   │   ├── read_preference.js
-│   │   │   │   │   ├── read_preference.js.map
-│   │   │   │   │   ├── resource_management.js
-│   │   │   │   │   ├── resource_management.js.map
-│   │   │   │   │   ├── sdam
-│   │   │   │   │   │   ├── common.js
-│   │   │   │   │   │   ├── common.js.map
-│   │   │   │   │   │   ├── events.js
-│   │   │   │   │   │   ├── events.js.map
-│   │   │   │   │   │   ├── monitor.js
-│   │   │   │   │   │   ├── monitor.js.map
-│   │   │   │   │   │   ├── sdam_tree.txt
-│   │   │   │   │   │   ├── server.js
-│   │   │   │   │   │   ├── server.js.map
-│   │   │   │   │   │   ├── server_description.js
-│   │   │   │   │   │   ├── server_description.js.map
-│   │   │   │   │   │   ├── server_selection.js
-│   │   │   │   │   │   ├── server_selection.js.map
-│   │   │   │   │   │   ├── server_selection_events.js
-│   │   │   │   │   │   ├── server_selection_events.js.map
-│   │   │   │   │   │   ├── srv_polling.js
-│   │   │   │   │   │   ├── srv_polling.js.map
-│   │   │   │   │   │   ├── topology.js
-│   │   │   │   │   │   ├── topology.js.map
-│   │   │   │   │   │   ├── topology_description.js
-│   │   │   │   │   │   └── topology_description.js.map
-│   │   │   │   │   ├── sessions.js
-│   │   │   │   │   ├── sessions.js.map
-│   │   │   │   │   ├── sort.js
-│   │   │   │   │   ├── sort.js.map
-│   │   │   │   │   ├── timeout.js
-│   │   │   │   │   ├── timeout.js.map
-│   │   │   │   │   ├── transactions.js
-│   │   │   │   │   ├── transactions.js.map
-│   │   │   │   │   ├── utils.js
-│   │   │   │   │   ├── utils.js.map
-│   │   │   │   │   ├── write_concern.js
-│   │   │   │   │   └── write_concern.js.map
-│   │   │   │   ├── mongodb.d.ts
-│   │   │   │   ├── mongodb_tree.txt
-│   │   │   │   ├── package.json
-│   │   │   │   ├── src
-│   │   │   │   │   ├── admin.ts
-│   │   │   │   │   ├── beta.ts
-│   │   │   │   │   ├── bson.ts
-│   │   │   │   │   ├── bulk
-│   │   │   │   │   │   ├── bulk_tree.txt
-│   │   │   │   │   │   ├── common.ts
-│   │   │   │   │   │   ├── ordered.ts
-│   │   │   │   │   │   └── unordered.ts
-│   │   │   │   │   ├── change_stream.ts
-│   │   │   │   │   ├── client-side-encryption
-│   │   │   │   │   │   ├── auto_encrypter.ts
-│   │   │   │   │   │   ├── client-side-encryption_tree.txt
-│   │   │   │   │   │   ├── client_encryption.ts
-│   │   │   │   │   │   ├── crypto_callbacks.ts
-│   │   │   │   │   │   ├── errors.ts
-│   │   │   │   │   │   ├── mongocryptd_manager.ts
-│   │   │   │   │   │   ├── providers
-│   │   │   │   │   │   │   ├── aws.ts
-│   │   │   │   │   │   │   ├── azure.ts
-│   │   │   │   │   │   │   ├── gcp.ts
-│   │   │   │   │   │   │   ├── index.ts
-│   │   │   │   │   │   │   └── providers_tree.txt
-│   │   │   │   │   │   └── state_machine.ts
-│   │   │   │   │   ├── cmap
-│   │   │   │   │   │   ├── auth
-│   │   │   │   │   │   │   ├── auth_provider.ts
-│   │   │   │   │   │   │   ├── auth_tree.txt
-│   │   │   │   │   │   │   ├── aws_temporary_credentials.ts
-│   │   │   │   │   │   │   ├── gssapi.ts
-│   │   │   │   │   │   │   ├── mongo_credentials.ts
-│   │   │   │   │   │   │   ├── mongodb_aws.ts
-│   │   │   │   │   │   │   ├── mongodb_oidc
-│   │   │   │   │   │   │   │   ├── automated_callback_workflow.ts
-│   │   │   │   │   │   │   │   ├── azure_machine_workflow.ts
-│   │   │   │   │   │   │   │   ├── callback_workflow.ts
-│   │   │   │   │   │   │   │   ├── command_builders.ts
-│   │   │   │   │   │   │   │   ├── gcp_machine_workflow.ts
-│   │   │   │   │   │   │   │   ├── human_callback_workflow.ts
-│   │   │   │   │   │   │   │   ├── machine_workflow.ts
-│   │   │   │   │   │   │   │   ├── mongodb_oidc_tree.txt
-│   │   │   │   │   │   │   │   ├── token_cache.ts
-│   │   │   │   │   │   │   │   └── token_machine_workflow.ts
-│   │   │   │   │   │   │   ├── mongodb_oidc.ts
-│   │   │   │   │   │   │   ├── plain.ts
-│   │   │   │   │   │   │   ├── providers.ts
-│   │   │   │   │   │   │   ├── scram.ts
-│   │   │   │   │   │   │   └── x509.ts
-│   │   │   │   │   │   ├── cmap_tree.txt
-│   │   │   │   │   │   ├── command_monitoring_events.ts
-│   │   │   │   │   │   ├── commands.ts
-│   │   │   │   │   │   ├── connect.ts
-│   │   │   │   │   │   ├── connection.ts
-│   │   │   │   │   │   ├── connection_pool.ts
-│   │   │   │   │   │   ├── connection_pool_events.ts
-│   │   │   │   │   │   ├── errors.ts
-│   │   │   │   │   │   ├── handshake
-│   │   │   │   │   │   │   ├── client_metadata.ts
-│   │   │   │   │   │   │   └── handshake_tree.txt
-│   │   │   │   │   │   ├── metrics.ts
-│   │   │   │   │   │   ├── stream_description.ts
-│   │   │   │   │   │   └── wire_protocol
-│   │   │   │   │   │       ├── compression.ts
-│   │   │   │   │   │       ├── constants.ts
-│   │   │   │   │   │       ├── on_data.ts
-│   │   │   │   │   │       ├── on_demand
-│   │   │   │   │   │       │   ├── document.ts
-│   │   │   │   │   │       │   └── on_demand_tree.txt
-│   │   │   │   │   │       ├── responses.ts
-│   │   │   │   │   │       ├── shared.ts
-│   │   │   │   │   │       └── wire_protocol_tree.txt
-│   │   │   │   │   ├── collection.ts
-│   │   │   │   │   ├── connection_string.ts
-│   │   │   │   │   ├── constants.ts
-│   │   │   │   │   ├── cursor
-│   │   │   │   │   │   ├── abstract_cursor.ts
-│   │   │   │   │   │   ├── aggregation_cursor.ts
-│   │   │   │   │   │   ├── change_stream_cursor.ts
-│   │   │   │   │   │   ├── client_bulk_write_cursor.ts
-│   │   │   │   │   │   ├── cursor_tree.txt
-│   │   │   │   │   │   ├── find_cursor.ts
-│   │   │   │   │   │   ├── list_collections_cursor.ts
-│   │   │   │   │   │   ├── list_indexes_cursor.ts
-│   │   │   │   │   │   ├── list_search_indexes_cursor.ts
-│   │   │   │   │   │   └── run_command_cursor.ts
-│   │   │   │   │   ├── db.ts
-│   │   │   │   │   ├── deps.ts
-│   │   │   │   │   ├── encrypter.ts
-│   │   │   │   │   ├── error.ts
-│   │   │   │   │   ├── explain.ts
-│   │   │   │   │   ├── gridfs
-│   │   │   │   │   │   ├── download.ts
-│   │   │   │   │   │   ├── gridfs_tree.txt
-│   │   │   │   │   │   ├── index.ts
-│   │   │   │   │   │   └── upload.ts
-│   │   │   │   │   ├── index.ts
-│   │   │   │   │   ├── mongo_client.ts
-│   │   │   │   │   ├── mongo_client_auth_providers.ts
-│   │   │   │   │   ├── mongo_logger.ts
-│   │   │   │   │   ├── mongo_types.ts
-│   │   │   │   │   ├── operations
-│   │   │   │   │   │   ├── aggregate.ts
-│   │   │   │   │   │   ├── bulk_write.ts
-│   │   │   │   │   │   ├── client_bulk_write
-│   │   │   │   │   │   │   ├── client_bulk_write.ts
-│   │   │   │   │   │   │   ├── client_bulk_write_tree.txt
-│   │   │   │   │   │   │   ├── command_builder.ts
-│   │   │   │   │   │   │   ├── common.ts
-│   │   │   │   │   │   │   ├── executor.ts
-│   │   │   │   │   │   │   └── results_merger.ts
-│   │   │   │   │   │   ├── collections.ts
-│   │   │   │   │   │   ├── command.ts
-│   │   │   │   │   │   ├── count.ts
-│   │   │   │   │   │   ├── create_collection.ts
-│   │   │   │   │   │   ├── delete.ts
-│   │   │   │   │   │   ├── distinct.ts
-│   │   │   │   │   │   ├── drop.ts
-│   │   │   │   │   │   ├── estimated_document_count.ts
-│   │   │   │   │   │   ├── execute_operation.ts
-│   │   │   │   │   │   ├── find.ts
-│   │   │   │   │   │   ├── find_and_modify.ts
-│   │   │   │   │   │   ├── get_more.ts
-│   │   │   │   │   │   ├── indexes.ts
-│   │   │   │   │   │   ├── insert.ts
-│   │   │   │   │   │   ├── is_capped.ts
-│   │   │   │   │   │   ├── kill_cursors.ts
-│   │   │   │   │   │   ├── list_collections.ts
-│   │   │   │   │   │   ├── list_databases.ts
-│   │   │   │   │   │   ├── operation.ts
-│   │   │   │   │   │   ├── operations_tree.txt
-│   │   │   │   │   │   ├── options_operation.ts
-│   │   │   │   │   │   ├── profiling_level.ts
-│   │   │   │   │   │   ├── remove_user.ts
-│   │   │   │   │   │   ├── rename.ts
-│   │   │   │   │   │   ├── run_command.ts
-│   │   │   │   │   │   ├── search_indexes
-│   │   │   │   │   │   │   ├── create.ts
-│   │   │   │   │   │   │   ├── drop.ts
-│   │   │   │   │   │   │   ├── search_indexes_tree.txt
-│   │   │   │   │   │   │   └── update.ts
-│   │   │   │   │   │   ├── set_profiling_level.ts
-│   │   │   │   │   │   ├── stats.ts
-│   │   │   │   │   │   ├── update.ts
-│   │   │   │   │   │   └── validate_collection.ts
-│   │   │   │   │   ├── read_concern.ts
-│   │   │   │   │   ├── read_preference.ts
-│   │   │   │   │   ├── resource_management.ts
-│   │   │   │   │   ├── sdam
-│   │   │   │   │   │   ├── common.ts
-│   │   │   │   │   │   ├── events.ts
-│   │   │   │   │   │   ├── monitor.ts
-│   │   │   │   │   │   ├── sdam_tree.txt
-│   │   │   │   │   │   ├── server.ts
-│   │   │   │   │   │   ├── server_description.ts
-│   │   │   │   │   │   ├── server_selection.ts
-│   │   │   │   │   │   ├── server_selection_events.ts
-│   │   │   │   │   │   ├── srv_polling.ts
-│   │   │   │   │   │   ├── topology.ts
-│   │   │   │   │   │   └── topology_description.ts
-│   │   │   │   │   ├── sessions.ts
-│   │   │   │   │   ├── sort.ts
-│   │   │   │   │   ├── src_tree.txt
-│   │   │   │   │   ├── timeout.ts
-│   │   │   │   │   ├── transactions.ts
-│   │   │   │   │   ├── utils.ts
-│   │   │   │   │   └── write_concern.ts
-│   │   │   │   └── tsconfig.json
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── mongodb
+│   │   │       ├── LICENSE.md
+│   │   │       ├── README.md
+│   │   │       ├── etc
+│   │   │       │   ├── etc_tree.txt
+│   │   │       │   └── prepare.js
+│   │   │       ├── lib
+│   │   │       │   ├── admin.js
+│   │   │       │   ├── admin.js.map
+│   │   │       │   ├── beta.d.ts
+│   │   │       │   ├── beta.js
+│   │   │       │   ├── beta.js.map
+│   │   │       │   ├── bson.js
+│   │   │       │   ├── bson.js.map
+│   │   │       │   ├── bulk
+│   │   │       │   │   ├── bulk_tree.txt
+│   │   │       │   │   ├── common.js
+│   │   │       │   │   ├── common.js.map
+│   │   │       │   │   ├── ordered.js
+│   │   │       │   │   ├── ordered.js.map
+│   │   │       │   │   ├── unordered.js
+│   │   │       │   │   └── unordered.js.map
+│   │   │       │   ├── change_stream.js
+│   │   │       │   ├── change_stream.js.map
+│   │   │       │   ├── client-side-encryption
+│   │   │       │   │   ├── auto_encrypter.js
+│   │   │       │   │   ├── auto_encrypter.js.map
+│   │   │       │   │   ├── client-side-encryption_tree.txt
+│   │   │       │   │   ├── client_encryption.js
+│   │   │       │   │   ├── client_encryption.js.map
+│   │   │       │   │   ├── crypto_callbacks.js
+│   │   │       │   │   ├── crypto_callbacks.js.map
+│   │   │       │   │   ├── errors.js
+│   │   │       │   │   ├── errors.js.map
+│   │   │       │   │   ├── mongocryptd_manager.js
+│   │   │       │   │   ├── mongocryptd_manager.js.map
+│   │   │       │   │   ├── providers
+│   │   │       │   │   │   ├── aws.js
+│   │   │       │   │   │   ├── aws.js.map
+│   │   │       │   │   │   ├── azure.js
+│   │   │       │   │   │   ├── azure.js.map
+│   │   │       │   │   │   ├── gcp.js
+│   │   │       │   │   │   ├── gcp.js.map
+│   │   │       │   │   │   ├── index.js
+│   │   │       │   │   │   ├── index.js.map
+│   │   │       │   │   │   └── providers_tree.txt
+│   │   │       │   │   ├── state_machine.js
+│   │   │       │   │   └── state_machine.js.map
+│   │   │       │   ├── cmap
+│   │   │       │   │   ├── auth
+│   │   │       │   │   │   ├── auth_provider.js
+│   │   │       │   │   │   ├── auth_provider.js.map
+│   │   │       │   │   │   ├── auth_tree.txt
+│   │   │       │   │   │   ├── aws_temporary_credentials.js
+│   │   │       │   │   │   ├── aws_temporary_credentials.js.map
+│   │   │       │   │   │   ├── gssapi.js
+│   │   │       │   │   │   ├── gssapi.js.map
+│   │   │       │   │   │   ├── mongo_credentials.js
+│   │   │       │   │   │   ├── mongo_credentials.js.map
+│   │   │       │   │   │   ├── mongodb_aws.js
+│   │   │       │   │   │   ├── mongodb_aws.js.map
+│   │   │       │   │   │   ├── mongodb_oidc
+│   │   │       │   │   │   │   ├── automated_callback_workflow.js
+│   │   │       │   │   │   │   ├── automated_callback_workflow.js.map
+│   │   │       │   │   │   │   ├── azure_machine_workflow.js
+│   │   │       │   │   │   │   ├── azure_machine_workflow.js.map
+│   │   │       │   │   │   │   ├── callback_workflow.js
+│   │   │       │   │   │   │   ├── callback_workflow.js.map
+│   │   │       │   │   │   │   ├── command_builders.js
+│   │   │       │   │   │   │   ├── command_builders.js.map
+│   │   │       │   │   │   │   ├── gcp_machine_workflow.js
+│   │   │       │   │   │   │   ├── gcp_machine_workflow.js.map
+│   │   │       │   │   │   │   ├── human_callback_workflow.js
+│   │   │       │   │   │   │   ├── human_callback_workflow.js.map
+│   │   │       │   │   │   │   ├── machine_workflow.js
+│   │   │       │   │   │   │   ├── machine_workflow.js.map
+│   │   │       │   │   │   │   ├── mongodb_oidc_tree.txt
+│   │   │       │   │   │   │   ├── token_cache.js
+│   │   │       │   │   │   │   ├── token_cache.js.map
+│   │   │       │   │   │   │   ├── token_machine_workflow.js
+│   │   │       │   │   │   │   └── token_machine_workflow.js.map
+│   │   │       │   │   │   ├── mongodb_oidc.js
+│   │   │       │   │   │   ├── mongodb_oidc.js.map
+│   │   │       │   │   │   ├── plain.js
+│   │   │       │   │   │   ├── plain.js.map
+│   │   │       │   │   │   ├── providers.js
+│   │   │       │   │   │   ├── providers.js.map
+│   │   │       │   │   │   ├── scram.js
+│   │   │       │   │   │   ├── scram.js.map
+│   │   │       │   │   │   ├── x509.js
+│   │   │       │   │   │   └── x509.js.map
+│   │   │       │   │   ├── cmap_tree.txt
+│   │   │       │   │   ├── command_monitoring_events.js
+│   │   │       │   │   ├── command_monitoring_events.js.map
+│   │   │       │   │   ├── commands.js
+│   │   │       │   │   ├── commands.js.map
+│   │   │       │   │   ├── connect.js
+│   │   │       │   │   ├── connect.js.map
+│   │   │       │   │   ├── connection.js
+│   │   │       │   │   ├── connection.js.map
+│   │   │       │   │   ├── connection_pool.js
+│   │   │       │   │   ├── connection_pool.js.map
+│   │   │       │   │   ├── connection_pool_events.js
+│   │   │       │   │   ├── connection_pool_events.js.map
+│   │   │       │   │   ├── errors.js
+│   │   │       │   │   ├── errors.js.map
+│   │   │       │   │   ├── handshake
+│   │   │       │   │   │   ├── client_metadata.js
+│   │   │       │   │   │   ├── client_metadata.js.map
+│   │   │       │   │   │   └── handshake_tree.txt
+│   │   │       │   │   ├── metrics.js
+│   │   │       │   │   ├── metrics.js.map
+│   │   │       │   │   ├── stream_description.js
+│   │   │       │   │   ├── stream_description.js.map
+│   │   │       │   │   └── wire_protocol
+│   │   │       │   │       ├── compression.js
+│   │   │       │   │       ├── compression.js.map
+│   │   │       │   │       ├── constants.js
+│   │   │       │   │       ├── constants.js.map
+│   │   │       │   │       ├── on_data.js
+│   │   │       │   │       ├── on_data.js.map
+│   │   │       │   │       ├── on_demand
+│   │   │       │   │       │   ├── document.js
+│   │   │       │   │       │   ├── document.js.map
+│   │   │       │   │       │   └── on_demand_tree.txt
+│   │   │       │   │       ├── responses.js
+│   │   │       │   │       ├── responses.js.map
+│   │   │       │   │       ├── shared.js
+│   │   │       │   │       ├── shared.js.map
+│   │   │       │   │       └── wire_protocol_tree.txt
+│   │   │       │   ├── collection.js
+│   │   │       │   ├── collection.js.map
+│   │   │       │   ├── connection_string.js
+│   │   │       │   ├── connection_string.js.map
+│   │   │       │   ├── constants.js
+│   │   │       │   ├── constants.js.map
+│   │   │       │   ├── cursor
+│   │   │       │   │   ├── abstract_cursor.js
+│   │   │       │   │   ├── abstract_cursor.js.map
+│   │   │       │   │   ├── aggregation_cursor.js
+│   │   │       │   │   ├── aggregation_cursor.js.map
+│   │   │       │   │   ├── change_stream_cursor.js
+│   │   │       │   │   ├── change_stream_cursor.js.map
+│   │   │       │   │   ├── client_bulk_write_cursor.js
+│   │   │       │   │   ├── client_bulk_write_cursor.js.map
+│   │   │       │   │   ├── cursor_tree.txt
+│   │   │       │   │   ├── find_cursor.js
+│   │   │       │   │   ├── find_cursor.js.map
+│   │   │       │   │   ├── list_collections_cursor.js
+│   │   │       │   │   ├── list_collections_cursor.js.map
+│   │   │       │   │   ├── list_indexes_cursor.js
+│   │   │       │   │   ├── list_indexes_cursor.js.map
+│   │   │       │   │   ├── list_search_indexes_cursor.js
+│   │   │       │   │   ├── list_search_indexes_cursor.js.map
+│   │   │       │   │   ├── run_command_cursor.js
+│   │   │       │   │   └── run_command_cursor.js.map
+│   │   │       │   ├── db.js
+│   │   │       │   ├── db.js.map
+│   │   │       │   ├── deps.js
+│   │   │       │   ├── deps.js.map
+│   │   │       │   ├── encrypter.js
+│   │   │       │   ├── encrypter.js.map
+│   │   │       │   ├── error.js
+│   │   │       │   ├── error.js.map
+│   │   │       │   ├── explain.js
+│   │   │       │   ├── explain.js.map
+│   │   │       │   ├── gridfs
+│   │   │       │   │   ├── download.js
+│   │   │       │   │   ├── download.js.map
+│   │   │       │   │   ├── gridfs_tree.txt
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   ├── index.js.map
+│   │   │       │   │   ├── upload.js
+│   │   │       │   │   └── upload.js.map
+│   │   │       │   ├── index.js
+│   │   │       │   ├── index.js.map
+│   │   │       │   ├── lib_tree.txt
+│   │   │       │   ├── mongo_client.js
+│   │   │       │   ├── mongo_client.js.map
+│   │   │       │   ├── mongo_client_auth_providers.js
+│   │   │       │   ├── mongo_client_auth_providers.js.map
+│   │   │       │   ├── mongo_logger.js
+│   │   │       │   ├── mongo_logger.js.map
+│   │   │       │   ├── mongo_types.js
+│   │   │       │   ├── mongo_types.js.map
+│   │   │       │   ├── operations
+│   │   │       │   │   ├── aggregate.js
+│   │   │       │   │   ├── aggregate.js.map
+│   │   │       │   │   ├── bulk_write.js
+│   │   │       │   │   ├── bulk_write.js.map
+│   │   │       │   │   ├── client_bulk_write
+│   │   │       │   │   │   ├── client_bulk_write.js
+│   │   │       │   │   │   ├── client_bulk_write.js.map
+│   │   │       │   │   │   ├── client_bulk_write_tree.txt
+│   │   │       │   │   │   ├── command_builder.js
+│   │   │       │   │   │   ├── command_builder.js.map
+│   │   │       │   │   │   ├── common.js
+│   │   │       │   │   │   ├── common.js.map
+│   │   │       │   │   │   ├── executor.js
+│   │   │       │   │   │   ├── executor.js.map
+│   │   │       │   │   │   ├── results_merger.js
+│   │   │       │   │   │   └── results_merger.js.map
+│   │   │       │   │   ├── collections.js
+│   │   │       │   │   ├── collections.js.map
+│   │   │       │   │   ├── command.js
+│   │   │       │   │   ├── command.js.map
+│   │   │       │   │   ├── count.js
+│   │   │       │   │   ├── count.js.map
+│   │   │       │   │   ├── create_collection.js
+│   │   │       │   │   ├── create_collection.js.map
+│   │   │       │   │   ├── delete.js
+│   │   │       │   │   ├── delete.js.map
+│   │   │       │   │   ├── distinct.js
+│   │   │       │   │   ├── distinct.js.map
+│   │   │       │   │   ├── drop.js
+│   │   │       │   │   ├── drop.js.map
+│   │   │       │   │   ├── estimated_document_count.js
+│   │   │       │   │   ├── estimated_document_count.js.map
+│   │   │       │   │   ├── execute_operation.js
+│   │   │       │   │   ├── execute_operation.js.map
+│   │   │       │   │   ├── find.js
+│   │   │       │   │   ├── find.js.map
+│   │   │       │   │   ├── find_and_modify.js
+│   │   │       │   │   ├── find_and_modify.js.map
+│   │   │       │   │   ├── get_more.js
+│   │   │       │   │   ├── get_more.js.map
+│   │   │       │   │   ├── indexes.js
+│   │   │       │   │   ├── indexes.js.map
+│   │   │       │   │   ├── insert.js
+│   │   │       │   │   ├── insert.js.map
+│   │   │       │   │   ├── is_capped.js
+│   │   │       │   │   ├── is_capped.js.map
+│   │   │       │   │   ├── kill_cursors.js
+│   │   │       │   │   ├── kill_cursors.js.map
+│   │   │       │   │   ├── list_collections.js
+│   │   │       │   │   ├── list_collections.js.map
+│   │   │       │   │   ├── list_databases.js
+│   │   │       │   │   ├── list_databases.js.map
+│   │   │       │   │   ├── operation.js
+│   │   │       │   │   ├── operation.js.map
+│   │   │       │   │   ├── operations_tree.txt
+│   │   │       │   │   ├── options_operation.js
+│   │   │       │   │   ├── options_operation.js.map
+│   │   │       │   │   ├── profiling_level.js
+│   │   │       │   │   ├── profiling_level.js.map
+│   │   │       │   │   ├── remove_user.js
+│   │   │       │   │   ├── remove_user.js.map
+│   │   │       │   │   ├── rename.js
+│   │   │       │   │   ├── rename.js.map
+│   │   │       │   │   ├── run_command.js
+│   │   │       │   │   ├── run_command.js.map
+│   │   │       │   │   ├── search_indexes
+│   │   │       │   │   │   ├── create.js
+│   │   │       │   │   │   ├── create.js.map
+│   │   │       │   │   │   ├── drop.js
+│   │   │       │   │   │   ├── drop.js.map
+│   │   │       │   │   │   ├── search_indexes_tree.txt
+│   │   │       │   │   │   ├── update.js
+│   │   │       │   │   │   └── update.js.map
+│   │   │       │   │   ├── set_profiling_level.js
+│   │   │       │   │   ├── set_profiling_level.js.map
+│   │   │       │   │   ├── stats.js
+│   │   │       │   │   ├── stats.js.map
+│   │   │       │   │   ├── update.js
+│   │   │       │   │   ├── update.js.map
+│   │   │       │   │   ├── validate_collection.js
+│   │   │       │   │   └── validate_collection.js.map
+│   │   │       │   ├── read_concern.js
+│   │   │       │   ├── read_concern.js.map
+│   │   │       │   ├── read_preference.js
+│   │   │       │   ├── read_preference.js.map
+│   │   │       │   ├── resource_management.js
+│   │   │       │   ├── resource_management.js.map
+│   │   │       │   ├── sdam
+│   │   │       │   │   ├── common.js
+│   │   │       │   │   ├── common.js.map
+│   │   │       │   │   ├── events.js
+│   │   │       │   │   ├── events.js.map
+│   │   │       │   │   ├── monitor.js
+│   │   │       │   │   ├── monitor.js.map
+│   │   │       │   │   ├── sdam_tree.txt
+│   │   │       │   │   ├── server.js
+│   │   │       │   │   ├── server.js.map
+│   │   │       │   │   ├── server_description.js
+│   │   │       │   │   ├── server_description.js.map
+│   │   │       │   │   ├── server_selection.js
+│   │   │       │   │   ├── server_selection.js.map
+│   │   │       │   │   ├── server_selection_events.js
+│   │   │       │   │   ├── server_selection_events.js.map
+│   │   │       │   │   ├── srv_polling.js
+│   │   │       │   │   ├── srv_polling.js.map
+│   │   │       │   │   ├── topology.js
+│   │   │       │   │   ├── topology.js.map
+│   │   │       │   │   ├── topology_description.js
+│   │   │       │   │   └── topology_description.js.map
+│   │   │       │   ├── sessions.js
+│   │   │       │   ├── sessions.js.map
+│   │   │       │   ├── sort.js
+│   │   │       │   ├── sort.js.map
+│   │   │       │   ├── timeout.js
+│   │   │       │   ├── timeout.js.map
+│   │   │       │   ├── transactions.js
+│   │   │       │   ├── transactions.js.map
+│   │   │       │   ├── utils.js
+│   │   │       │   ├── utils.js.map
+│   │   │       │   ├── write_concern.js
+│   │   │       │   └── write_concern.js.map
+│   │   │       ├── mongodb.d.ts
+│   │   │       ├── mongodb_tree.txt
+│   │   │       ├── package.json
+│   │   │       ├── src
+│   │   │       │   ├── admin.ts
+│   │   │       │   ├── beta.ts
+│   │   │       │   ├── bson.ts
+│   │   │       │   ├── bulk
+│   │   │       │   │   ├── bulk_tree.txt
+│   │   │       │   │   ├── common.ts
+│   │   │       │   │   ├── ordered.ts
+│   │   │       │   │   └── unordered.ts
+│   │   │       │   ├── change_stream.ts
+│   │   │       │   ├── client-side-encryption
+│   │   │       │   │   ├── auto_encrypter.ts
+│   │   │       │   │   ├── client-side-encryption_tree.txt
+│   │   │       │   │   ├── client_encryption.ts
+│   │   │       │   │   ├── crypto_callbacks.ts
+│   │   │       │   │   ├── errors.ts
+│   │   │       │   │   ├── mongocryptd_manager.ts
+│   │   │       │   │   ├── providers
+│   │   │       │   │   │   ├── aws.ts
+│   │   │       │   │   │   ├── azure.ts
+│   │   │       │   │   │   ├── gcp.ts
+│   │   │       │   │   │   ├── index.ts
+│   │   │       │   │   │   └── providers_tree.txt
+│   │   │       │   │   └── state_machine.ts
+│   │   │       │   ├── cmap
+│   │   │       │   │   ├── auth
+│   │   │       │   │   │   ├── auth_provider.ts
+│   │   │       │   │   │   ├── auth_tree.txt
+│   │   │       │   │   │   ├── aws_temporary_credentials.ts
+│   │   │       │   │   │   ├── gssapi.ts
+│   │   │       │   │   │   ├── mongo_credentials.ts
+│   │   │       │   │   │   ├── mongodb_aws.ts
+│   │   │       │   │   │   ├── mongodb_oidc
+│   │   │       │   │   │   │   ├── automated_callback_workflow.ts
+│   │   │       │   │   │   │   ├── azure_machine_workflow.ts
+│   │   │       │   │   │   │   ├── callback_workflow.ts
+│   │   │       │   │   │   │   ├── command_builders.ts
+│   │   │       │   │   │   │   ├── gcp_machine_workflow.ts
+│   │   │       │   │   │   │   ├── human_callback_workflow.ts
+│   │   │       │   │   │   │   ├── machine_workflow.ts
+│   │   │       │   │   │   │   ├── mongodb_oidc_tree.txt
+│   │   │       │   │   │   │   ├── token_cache.ts
+│   │   │       │   │   │   │   └── token_machine_workflow.ts
+│   │   │       │   │   │   ├── mongodb_oidc.ts
+│   │   │       │   │   │   ├── plain.ts
+│   │   │       │   │   │   ├── providers.ts
+│   │   │       │   │   │   ├── scram.ts
+│   │   │       │   │   │   └── x509.ts
+│   │   │       │   │   ├── cmap_tree.txt
+│   │   │       │   │   ├── command_monitoring_events.ts
+│   │   │       │   │   ├── commands.ts
+│   │   │       │   │   ├── connect.ts
+│   │   │       │   │   ├── connection.ts
+│   │   │       │   │   ├── connection_pool.ts
+│   │   │       │   │   ├── connection_pool_events.ts
+│   │   │       │   │   ├── errors.ts
+│   │   │       │   │   ├── handshake
+│   │   │       │   │   │   ├── client_metadata.ts
+│   │   │       │   │   │   └── handshake_tree.txt
+│   │   │       │   │   ├── metrics.ts
+│   │   │       │   │   ├── stream_description.ts
+│   │   │       │   │   └── wire_protocol
+│   │   │       │   │       ├── compression.ts
+│   │   │       │   │       ├── constants.ts
+│   │   │       │   │       ├── on_data.ts
+│   │   │       │   │       ├── on_demand
+│   │   │       │   │       │   ├── document.ts
+│   │   │       │   │       │   └── on_demand_tree.txt
+│   │   │       │   │       ├── responses.ts
+│   │   │       │   │       ├── shared.ts
+│   │   │       │   │       └── wire_protocol_tree.txt
+│   │   │       │   ├── collection.ts
+│   │   │       │   ├── connection_string.ts
+│   │   │       │   ├── constants.ts
+│   │   │       │   ├── cursor
+│   │   │       │   │   ├── abstract_cursor.ts
+│   │   │       │   │   ├── aggregation_cursor.ts
+│   │   │       │   │   ├── change_stream_cursor.ts
+│   │   │       │   │   ├── client_bulk_write_cursor.ts
+│   │   │       │   │   ├── cursor_tree.txt
+│   │   │       │   │   ├── find_cursor.ts
+│   │   │       │   │   ├── list_collections_cursor.ts
+│   │   │       │   │   ├── list_indexes_cursor.ts
+│   │   │       │   │   ├── list_search_indexes_cursor.ts
+│   │   │       │   │   └── run_command_cursor.ts
+│   │   │       │   ├── db.ts
+│   │   │       │   ├── deps.ts
+│   │   │       │   ├── encrypter.ts
+│   │   │       │   ├── error.ts
+│   │   │       │   ├── explain.ts
+│   │   │       │   ├── gridfs
+│   │   │       │   │   ├── download.ts
+│   │   │       │   │   ├── gridfs_tree.txt
+│   │   │       │   │   ├── index.ts
+│   │   │       │   │   └── upload.ts
+│   │   │       │   ├── index.ts
+│   │   │       │   ├── mongo_client.ts
+│   │   │       │   ├── mongo_client_auth_providers.ts
+│   │   │       │   ├── mongo_logger.ts
+│   │   │       │   ├── mongo_types.ts
+│   │   │       │   ├── operations
+│   │   │       │   │   ├── aggregate.ts
+│   │   │       │   │   ├── bulk_write.ts
+│   │   │       │   │   ├── client_bulk_write
+│   │   │       │   │   │   ├── client_bulk_write.ts
+│   │   │       │   │   │   ├── client_bulk_write_tree.txt
+│   │   │       │   │   │   ├── command_builder.ts
+│   │   │       │   │   │   ├── common.ts
+│   │   │       │   │   │   ├── executor.ts
+│   │   │       │   │   │   └── results_merger.ts
+│   │   │       │   │   ├── collections.ts
+│   │   │       │   │   ├── command.ts
+│   │   │       │   │   ├── count.ts
+│   │   │       │   │   ├── create_collection.ts
+│   │   │       │   │   ├── delete.ts
+│   │   │       │   │   ├── distinct.ts
+│   │   │       │   │   ├── drop.ts
+│   │   │       │   │   ├── estimated_document_count.ts
+│   │   │       │   │   ├── execute_operation.ts
+│   │   │       │   │   ├── find.ts
+│   │   │       │   │   ├── find_and_modify.ts
+│   │   │       │   │   ├── get_more.ts
+│   │   │       │   │   ├── indexes.ts
+│   │   │       │   │   ├── insert.ts
+│   │   │       │   │   ├── is_capped.ts
+│   │   │       │   │   ├── kill_cursors.ts
+│   │   │       │   │   ├── list_collections.ts
+│   │   │       │   │   ├── list_databases.ts
+│   │   │       │   │   ├── operation.ts
+│   │   │       │   │   ├── operations_tree.txt
+│   │   │       │   │   ├── options_operation.ts
+│   │   │       │   │   ├── profiling_level.ts
+│   │   │       │   │   ├── remove_user.ts
+│   │   │       │   │   ├── rename.ts
+│   │   │       │   │   ├── run_command.ts
+│   │   │       │   │   ├── search_indexes
+│   │   │       │   │   │   ├── create.ts
+│   │   │       │   │   │   ├── drop.ts
+│   │   │       │   │   │   ├── search_indexes_tree.txt
+│   │   │       │   │   │   └── update.ts
+│   │   │       │   │   ├── set_profiling_level.ts
+│   │   │       │   │   ├── stats.ts
+│   │   │       │   │   ├── update.ts
+│   │   │       │   │   └── validate_collection.ts
+│   │   │       │   ├── read_concern.ts
+│   │   │       │   ├── read_preference.ts
+│   │   │       │   ├── resource_management.ts
+│   │   │       │   ├── sdam
+│   │   │       │   │   ├── common.ts
+│   │   │       │   │   ├── events.ts
+│   │   │       │   │   ├── monitor.ts
+│   │   │       │   │   ├── sdam_tree.txt
+│   │   │       │   │   ├── server.ts
+│   │   │       │   │   ├── server_description.ts
+│   │   │       │   │   ├── server_selection.ts
+│   │   │       │   │   ├── server_selection_events.ts
+│   │   │       │   │   ├── srv_polling.ts
+│   │   │       │   │   ├── topology.ts
+│   │   │       │   │   └── topology_description.ts
+│   │   │       │   ├── sessions.ts
+│   │   │       │   ├── sort.ts
+│   │   │       │   ├── src_tree.txt
+│   │   │       │   ├── timeout.ts
+│   │   │       │   ├── transactions.ts
+│   │   │       │   ├── utils.ts
+│   │   │       │   └── write_concern.ts
+│   │   │       └── tsconfig.json
 │   │   ├── package.json
 │   │   └── types
 │   │       ├── aggregate.d.ts
@@ -14454,7 +14569,6 @@
 │   │   │       └── release-schedule_tree.txt
 │   │   ├── node-releases_tree.txt
 │   │   └── package.json
-│   ├── node_modules_tree.txt
 │   ├── normalize-path
 │   │   ├── LICENSE
 │   │   ├── README.md
@@ -15581,32 +15695,31 @@
 │   │   │       ├── index.js.map
 │   │   │       └── package.json
 │   │   ├── node_modules
-│   │   │   ├── lru-cache
-│   │   │   │   ├── LICENSE
-│   │   │   │   ├── README.md
-│   │   │   │   ├── dist
-│   │   │   │   │   ├── commonjs
-│   │   │   │   │   │   ├── commonjs_tree.txt
-│   │   │   │   │   │   ├── index.d.ts
-│   │   │   │   │   │   ├── index.d.ts.map
-│   │   │   │   │   │   ├── index.js
-│   │   │   │   │   │   ├── index.js.map
-│   │   │   │   │   │   ├── index.min.js
-│   │   │   │   │   │   ├── index.min.js.map
-│   │   │   │   │   │   └── package.json
-│   │   │   │   │   ├── dist_tree.txt
-│   │   │   │   │   └── esm
-│   │   │   │   │       ├── esm_tree.txt
-│   │   │   │   │       ├── index.d.ts
-│   │   │   │   │       ├── index.d.ts.map
-│   │   │   │   │       ├── index.js
-│   │   │   │   │       ├── index.js.map
-│   │   │   │   │       ├── index.min.js
-│   │   │   │   │       ├── index.min.js.map
-│   │   │   │   │       └── package.json
-│   │   │   │   ├── lru-cache_tree.txt
-│   │   │   │   └── package.json
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── lru-cache
+│   │   │       ├── LICENSE
+│   │   │       ├── README.md
+│   │   │       ├── dist
+│   │   │       │   ├── commonjs
+│   │   │       │   │   ├── commonjs_tree.txt
+│   │   │       │   │   ├── index.d.ts
+│   │   │       │   │   ├── index.d.ts.map
+│   │   │       │   │   ├── index.js
+│   │   │       │   │   ├── index.js.map
+│   │   │       │   │   ├── index.min.js
+│   │   │       │   │   ├── index.min.js.map
+│   │   │       │   │   └── package.json
+│   │   │       │   ├── dist_tree.txt
+│   │   │       │   └── esm
+│   │   │       │       ├── esm_tree.txt
+│   │   │       │       ├── index.d.ts
+│   │   │       │       ├── index.d.ts.map
+│   │   │       │       ├── index.js
+│   │   │       │       ├── index.js.map
+│   │   │       │       ├── index.min.js
+│   │   │       │       ├── index.min.js.map
+│   │   │       │       └── package.json
+│   │   │       ├── lru-cache_tree.txt
+│   │   │       └── package.json
 │   │   ├── package.json
 │   │   └── path-scurry_tree.txt
 │   ├── path-to-regexp
@@ -15744,16 +15857,15 @@
 │   │   ├── LICENSE
 │   │   ├── README.md
 │   │   ├── node_modules
-│   │   │   ├── lilconfig
-│   │   │   │   ├── LICENSE
-│   │   │   │   ├── lilconfig_tree.txt
-│   │   │   │   ├── package.json
-│   │   │   │   ├── readme.md
-│   │   │   │   └── src
-│   │   │   │       ├── index.d.ts
-│   │   │   │       ├── index.js
-│   │   │   │       └── src_tree.txt
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── lilconfig
+│   │   │       ├── LICENSE
+│   │   │       ├── lilconfig_tree.txt
+│   │   │       ├── package.json
+│   │   │       ├── readme.md
+│   │   │       └── src
+│   │   │           ├── index.d.ts
+│   │   │           ├── index.js
+│   │   │           └── src_tree.txt
 │   │   ├── package.json
 │   │   ├── postcss-load-config_tree.txt
 │   │   └── src
@@ -15854,7 +15966,6 @@
 │   │   │   ├── has.js
 │   │   │   └── lib_tree.txt
 │   │   ├── node_modules
-│   │   │   ├── node_modules_tree.txt
 │   │   │   └── react-is
 │   │   │       ├── LICENSE
 │   │   │       ├── README.md
@@ -17119,13 +17230,12 @@
 │   │   │   │   ├── karma.conf.js
 │   │   │   │   ├── node.js
 │   │   │   │   ├── node_modules
-│   │   │   │   │   ├── ms
-│   │   │   │   │   │   ├── index.js
-│   │   │   │   │   │   ├── license.md
-│   │   │   │   │   │   ├── ms_tree.txt
-│   │   │   │   │   │   ├── package.json
-│   │   │   │   │   │   └── readme.md
-│   │   │   │   │   └── node_modules_tree.txt
+│   │   │   │   │   └── ms
+│   │   │   │   │       ├── index.js
+│   │   │   │   │       ├── license.md
+│   │   │   │   │       ├── ms_tree.txt
+│   │   │   │   │       ├── package.json
+│   │   │   │   │       └── readme.md
 │   │   │   │   ├── package.json
 │   │   │   │   └── src
 │   │   │   │       ├── browser.js
@@ -17134,14 +17244,13 @@
 │   │   │   │       ├── inspector-log.js
 │   │   │   │       ├── node.js
 │   │   │   │       └── src_tree.txt
-│   │   │   ├── encodeurl
-│   │   │   │   ├── HISTORY.md
-│   │   │   │   ├── LICENSE
-│   │   │   │   ├── README.md
-│   │   │   │   ├── encodeurl_tree.txt
-│   │   │   │   ├── index.js
-│   │   │   │   └── package.json
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── encodeurl
+│   │   │       ├── HISTORY.md
+│   │   │       ├── LICENSE
+│   │   │       ├── README.md
+│   │   │       ├── encodeurl_tree.txt
+│   │   │       ├── index.js
+│   │   │       └── package.json
 │   │   ├── package.json
 │   │   └── send_tree.txt
 │   ├── serve-static
@@ -17335,7 +17444,6 @@
 │   │   │   │   ├── index.js
 │   │   │   │   ├── package.json
 │   │   │   │   └── text.js
-│   │   │   ├── node_modules_tree.txt
 │   │   │   └── strip-ansi
 │   │   │       ├── index.d.ts
 │   │   │       ├── index.js
@@ -17358,14 +17466,13 @@
 │   │   ├── index.js
 │   │   ├── license
 │   │   ├── node_modules
-│   │   │   ├── ansi-regex
-│   │   │   │   ├── ansi-regex_tree.txt
-│   │   │   │   ├── index.d.ts
-│   │   │   │   ├── index.js
-│   │   │   │   ├── license
-│   │   │   │   ├── package.json
-│   │   │   │   └── readme.md
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── ansi-regex
+│   │   │       ├── ansi-regex_tree.txt
+│   │   │       ├── index.d.ts
+│   │   │       ├── index.js
+│   │   │       ├── license
+│   │   │       ├── package.json
+│   │   │       └── readme.md
 │   │   ├── package.json
 │   │   ├── readme.md
 │   │   └── strip-ansi-cjs_tree.txt
@@ -19143,14 +19250,13 @@
 │   │   ├── index.js
 │   │   ├── license
 │   │   ├── node_modules
-│   │   │   ├── ansi-styles
-│   │   │   │   ├── ansi-styles_tree.txt
-│   │   │   │   ├── index.d.ts
-│   │   │   │   ├── index.js
-│   │   │   │   ├── license
-│   │   │   │   ├── package.json
-│   │   │   │   └── readme.md
-│   │   │   └── node_modules_tree.txt
+│   │   │   └── ansi-styles
+│   │   │       ├── ansi-styles_tree.txt
+│   │   │       ├── index.d.ts
+│   │   │       ├── index.js
+│   │   │       ├── license
+│   │   │       ├── package.json
+│   │   │       └── readme.md
 │   │   ├── package.json
 │   │   ├── readme.md
 │   │   └── wrap-ansi_tree.txt
@@ -19199,7 +19305,6 @@
 │   │   │   │   ├── index.js
 │   │   │   │   ├── package.json
 │   │   │   │   └── text.js
-│   │   │   ├── node_modules_tree.txt
 │   │   │   ├── string-width
 │   │   │   │   ├── index.d.ts
 │   │   │   │   ├── index.js
@@ -19715,9 +19820,10 @@
 │   ├── App.tsx
 │   ├── api
 │   │   ├── api_tree.txt
-│   │   └── userApi.js
+│   │   └── userApi.ts
 │   ├── components
 │   │   ├── CourseCreation.tsx
+│   │   ├── ErrorBoundary.tsx
 │   │   ├── LearningStyleAssessment.tsx
 │   │   ├── Signin.tsx
 │   │   ├── Signup.tsx
@@ -19725,11 +19831,13 @@
 │   │   ├── UserProfile.tsx
 │   │   └── components_tree.txt
 │   ├── controllers
+│   │   ├── controllers_tree.txt
 │   │   └── userController.js
 │   ├── index.css
 │   ├── main.tsx
 │   ├── middleware
-│   │   └── errorHandler.js
+│   │   ├── errorHandler.js
+│   │   └── middleware_tree.txt
 │   ├── models
 │   │   ├── models_tree.txt
 │   │   └── userModel.js
@@ -19742,7 +19850,8 @@
 │   │   └── useStore.ts
 │   ├── types
 │   │   ├── index.ts
-│   │   └── types_tree.txt
+│   │   ├── types_tree.txt
+│   │   └── user.ts
 │   ├── utils
 │   │   ├── db.js
 │   │   └── utils_tree.txt
@@ -19754,4 +19863,4 @@
 ├── tsconfig.node.json
 └── vite.config.ts
 
-1733 directories, 18022 files
+1757 directories, 18107 files

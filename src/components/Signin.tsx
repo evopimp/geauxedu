@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
-import { findUserByEmail } from '../api/userApi';
+import { signIn } from '../api/userApi';
 import { useStore } from '../store/useStore';
 
 const Signin = () => {
@@ -21,23 +21,21 @@ const Signin = () => {
     }),
     onSubmit: async (values) => {
       try {
-        const user = await findUserByEmail(values.email);
-        if (!user) {
-          setError('No account found with this email address');
-          return;
+        setError(null);
+        const { user, token } = await signIn(values.email, values.password);
+        
+        // Store token in localStorage
+        try {
+          localStorage.setItem('token', token);
+        } catch (storageError) {
+          console.error('Failed to store token in localStorage:', storageError);
         }
         
-        // TODO: Add actual password verification here
-        // This is a placeholder - you should implement proper password verification
-        if (values.password !== user.password) {
-          setError('Invalid email or password');
-          return;
-        }
-        
+        // Update user state
         setUser(user);
         navigate('/profile');
       } catch (error) {
-        setError(error instanceof Error ? error.message : 'An unexpected error occurred');
+        setError(error instanceof Error ? error.message : 'An error occurred during sign in');
       }
     },
   });
@@ -45,6 +43,11 @@ const Signin = () => {
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6">Sign In</h2>
+      {error && (
+        <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+          {error}
+        </div>
+      )}
       <form onSubmit={formik.handleSubmit}>
         {/* Email Field */}
         <div className="mb-4">
@@ -53,7 +56,6 @@ const Signin = () => {
           </label>
           <input
             type="email"
-            name="email"
             {...formik.getFieldProps('email')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />
@@ -69,7 +71,6 @@ const Signin = () => {
           </label>
           <input
             type="password"
-            name="password"
             {...formik.getFieldProps('password')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />

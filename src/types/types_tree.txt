@@ -1,5 +1,6 @@
 /home/wicked/geauxedu/src//types/
 ├── index.ts
-└── types_tree.txt
+├── types_tree.txt
+└── user.ts
 
-1 directory, 2 files
+1 directory, 3 files

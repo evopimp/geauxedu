@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
-import { createUser } from '../api/userApi.ts';
+import { createUser } from '../api/userApi';
 import { useStore } from '../store/useStore';
+import { User } from '../types';
 
 const Signup = () => {
   const { setUser } = useStore();
@@ -24,6 +25,42 @@ const Signup = () => {
     avatar: Yup.string().url('Invalid URL').required('Required'),
   });
 
+  const createNewUser = (values: { name: string; email: string; password: string; confirmPassword: string; avatar: string }) => ({
+    email: values.email,
+    password: values.password,
+    learningStyles: {
+      visual: 0,
+      auditory: 0,
+      reading: 0,
+      kinesthetic: 0,
+    },
+    streak: 0,
+    avatar: values.avatar || '',
+  });
+
+  const handleUserCreation = (createdUser: User) => {
+    if (!createdUser || !createdUser._id) {
+      throw new Error('Failed to create user account');
+    }
+
+    setUser({
+      _id: createdUser._id,
+      name: createdUser.name,
+      email: createdUser.email,
+      password: createdUser.password, // Include password
+      learningStyles: createdUser.learningStyles,
+      streak: createdUser.streak,
+      avatar: createdUser.avatar,
+    });
+    navigate('/profile');
+  };
+
+  const handleSignupError = (error: any) => {
+    const errorMessage = error instanceof Error ? error.message : 'Failed to create account';
+    setError(errorMessage);
+    console.error('Signup error:', errorMessage);
+  };
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -34,34 +71,13 @@ const Signup = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
+      setError(null);
+      const newUser = createNewUser(values);
       try {
-        setError(null);
-        const newUser = {
-          name: values.name,
-          email: values.email,
-          password: values.password, // Send plain password, backend will hash it
-          learningStyles: {
-            visual: 0,
-            auditory: 0,
-            reading: 0,
-            kinesthetic: 0,
-          },
-          streak: 0,
-          avatar: values.avatar,
-        };
         const createdUser = await createUser(newUser);
-        setUser({
-          _id: createdUser._id,
-          name: createdUser.name,
-          email: createdUser.email,
-          learningStyles: createdUser.learningStyles,
-          streak: createdUser.streak,
-          avatar: createdUser.avatar,
-          password: '' // Don't store password in frontend state
-        });
-        navigate('/profile');
+        handleUserCreation(createdUser);
       } catch (error) {
-        setError(error instanceof Error ? error.message : 'An unexpected error occurred');
+        handleSignupError(error);
       }
     },
   });
@@ -69,11 +85,13 @@ const Signup = () => {
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6">Sign Up</h2>
+      
       {error && (
         <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
           {error}
         </div>
       )}
+
       <form onSubmit={formik.handleSubmit}>
         {/* Name Field */}
         <div className="mb-4">
@@ -81,8 +99,6 @@ const Signup = () => {
             Name
           </label>
           <input
-            type="text"
-            name="name"
             {...formik.getFieldProps('name')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />
@@ -98,7 +114,6 @@ const Signup = () => {
           </label>
           <input
             type="email"
-            name="email"
             {...formik.getFieldProps('email')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />
@@ -114,9 +129,7 @@ const Signup = () => {
           </label>
           <input
             type="password"
-            name="password"
             {...formik.getFieldProps('password')}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />
           {formik.touched.password && formik.errors.password ? (
             <div className="text-red-600 text-sm">{formik.errors.password}</div>
@@ -130,7 +143,6 @@ const Signup = () => {
           </label>
           <input
             type="password"
-            name="confirmPassword"
             {...formik.getFieldProps('confirmPassword')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />
@@ -148,7 +160,6 @@ const Signup = () => {
           </label>
           <input
             type="text"
-            name="avatar"
             {...formik.getFieldProps('avatar')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />
@@ -162,10 +173,11 @@ const Signup = () => {
           type="submit"
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
         >
-          Sign Up
+          Sign up
         </button>
       </form>
 
+      {/* Sign In Link */}
       <p className="mt-4 text-center">
         Already have an account?{' '}
         <Link to="/signin" className="text-blue-600">

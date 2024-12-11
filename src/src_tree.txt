@@ -2,9 +2,10 @@
 ├── App.tsx
 ├── api
 │   ├── api_tree.txt
-│   └── userApi.js
+│   └── userApi.ts
 ├── components
 │   ├── CourseCreation.tsx
+│   ├── ErrorBoundary.tsx
 │   ├── LearningStyleAssessment.tsx
 │   ├── Signin.tsx
 │   ├── Signup.tsx
@@ -12,11 +13,13 @@
 │   ├── UserProfile.tsx
 │   └── components_tree.txt
 ├── controllers
+│   ├── controllers_tree.txt
 │   └── userController.js
 ├── index.css
 ├── main.tsx
 ├── middleware
-│   └── errorHandler.js
+│   ├── errorHandler.js
+│   └── middleware_tree.txt
 ├── models
 │   ├── models_tree.txt
 │   └── userModel.js
@@ -29,10 +32,11 @@
 │   └── useStore.ts
 ├── types
 │   ├── index.ts
-│   └── types_tree.txt
+│   ├── types_tree.txt
+│   └── user.ts
 ├── utils
 │   ├── db.js
 │   └── utils_tree.txt
 └── vite-env.d.ts
 
-10 directories, 26 files
+10 directories, 30 files

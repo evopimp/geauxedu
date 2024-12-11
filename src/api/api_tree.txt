@@ -1,5 +1,5 @@
 /home/wicked/geauxedu/src//api/
 ├── api_tree.txt
-└── userApi.js
+└── userApi.ts
 
 1 directory, 2 files

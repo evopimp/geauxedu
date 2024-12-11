@@ -1,5 +1,6 @@
 import User from '../models/userModel.js';
 import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
 export const getAllUsers = async (req, res) => {
   try {
@@ -92,6 +93,45 @@ export const deleteUser = async (req, res) => {
     if (!user) return res.status(404).json({ message: 'User not found' });
     res.json({ message: 'User deleted' });
   } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const signIn = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    
+    // Find user with password
+    const user = await User.findOne({ email });
+    
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Compare password
+    const isValidPassword = await bcrypt.compare(password, user.password);
+    
+    if (!isValidPassword) {
+      return res.status(401).json({ message: 'Invalid password' });
+    }
+
+    // Create token
+    const token = jwt.sign(
+      { userId: user._id },
+      process.env.JWT_SECRET || 'your-secret-key',
+      { expiresIn: '24h' }
+    );
+
+    // Remove password from response
+    const userResponse = user.toObject();
+    delete userResponse.password;
+
+    res.json({
+      user: userResponse,
+      token
+    });
+  } catch (error) {
+    console.error('Sign in error:', error);
     res.status(500).json({ message: error.message });
   }
 };

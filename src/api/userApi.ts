@@ -8,6 +8,11 @@ interface APIError {
   status?: number;
 }
 
+interface AuthResponse {
+  user: User;
+  token: string;
+}
+
 export const createUser = async (userData: Partial<User>): Promise<User> => {
   try {
     const response = await axios.post<User>(API_URL, userData);
@@ -17,6 +22,7 @@ export const createUser = async (userData: Partial<User>): Promise<User> => {
     const errorMessage = axiosError.response?.data?.message 
       || axiosError.response?.statusText 
       || 'Failed to create user';
+    console.error('Create user error:', errorMessage);
     throw new Error(errorMessage);
   }
 };
@@ -89,5 +95,18 @@ export const deleteUser = async (userId: string): Promise<void> => {
       message: axiosError.response?.data?.message || 'Failed to delete user',
       status: axiosError.response?.status
     };
+  }
+};
+
+export const signIn = async (email: string, password: string): Promise<AuthResponse> => {
+  try {
+    const response = await axios.post<AuthResponse>(`${API_URL}/signin`, {
+      email,
+      password
+    });
+    return response.data;
+  } catch (error) {
+    const axiosError = error as AxiosError<APIError>;
+    throw new Error(axiosError.response?.data?.message || 'Failed to sign in');
   }
 };
